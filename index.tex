@@ -980,7 +980,6 @@ a=\frac{F_{\mathrm{net}}}{m}
 % BAB 15 -- OSILASI   (potongan untuk ditempel ke main.tex)
 % Memakai makro yang sudah ada di main.tex: \bab, \soal, rumusutama,
 % \diketahui, \ditanya, \konsep, \penyelesaian, jawaban.
-% Tempel setelah Bab 14 dan sebelum Bab 16.
 % =====================================================================
 \bab{15}{Osilasi}
 
@@ -1412,7 +1411,6 @@ L &= \frac{gT^2}{4\pi^2}
 % BAB 16 -- GELOMBANG I   (potongan untuk ditempel ke main.tex)
 % Memakai makro yang sudah ada di main.tex: \bab, \soal, rumusutama,
 % \diketahui, \ditanya, \konsep, \penyelesaian, jawaban.
-% Tempel setelah Bab 15 dan sebelum Bab 17.
 % =====================================================================
 \bab{16}{Gelombang I}
 
@@ -1974,7 +1972,6 @@ f_1 &= \frac{v}{2L} = \frac{\SI{66,1}{\metre\per\second}}{2(\SI{1,25}{\metre})} 
 % BAB 17 -- GELOMBANG II   (potongan untuk ditempel ke main.tex)
 % Memakai makro yang sudah ada di main.tex: \bab, \soal, rumusutama,
 % \diketahui, \ditanya, \konsep, \penyelesaian, jawaban.
-% Tempel setelah Bab 16 dan sebelum Bab 18.
 % =====================================================================
 \bab{17}{Gelombang II}
 
@@ -2340,8 +2337,6 @@ d &= \sqrt{\left(\frac{10{,}0+0{,}425}{2}\right)^2-\left(\frac{10{,}0}{2}\right)
 %           (potongan untuk ditempel ke main.tex)
 % Memakai makro yang sudah ada di main.tex: \bab, \soal, rumusutama,
 % \diketahui, \ditanya, \konsep, \penyelesaian, jawaban.
-% Tempel setelah Bab 17 dan sebelum Bab 19.
-% Soal 61, 89, 96, dan 103 BELUM dikerjakan (teks soal belum ada).
 % =====================================================================
 \bab{18}{Suhu, Kalor, dan Hukum Pertama Termodinamika}
 
@@ -2427,89 +2422,89 @@ T &= T_0+\Delta T = \SI{25,00}{\celsius}+\SI{335}{\celsius}=\SI{360}{\celsius}.
 
 % ---------------------------------------------------------------------
 \soal{21}
-Suatu zat memiliki massa per mol \SI{50,0}{\gram\per\mole}. Ketika \SI{314}{\joule} kalor ditambahkan pada sampel \SI{30,0}{\gram}, suhu sampel naik dari \SI{25,0}{\celsius} menjadi \SI{45,0}{\celsius}. Berapa (a) kalor jenis dan (b) kalor jenis molar zat tersebut? (c) Berapa mol zat dalam sampel?
+Akibat kenaikan suhu sebesar \SI{32}{\celsius} (selisih suhu), sebuah batang dengan retakan di bagian tengahnya melengkung ke atas (Gambar 18-32). Jarak tetap $L_0$ antara kedua tumpuan adalah \SI{3,77}{\metre} dan koefisien muai linear batang adalah \SI{25e-6}{\per\celsius}. Tentukan kenaikan $x$ titik tengah batang.
 
-\diketahui\ (massa per mol zat dari teks soal edisi 10)
+\IfFileExists{images/21.png}{%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.45\linewidth]{images/21.png}
+  \caption{Batang yang melengkung ke atas (Gambar 18-32)}
+\end{figure}}{}
+
+\diketahui\ ($L_0$ adalah jarak seluruh batang di antara kedua tumpuan, menurut Gambar 18-32)
 \begin{align*}
-M &= \SI{50,0}{\gram\per\mole},&
-m &= \SI{30,0}{\gram}=\SI{0,0300}{\kilo\gram},&
-Q &= \SI{314}{\joule},\\
-T_i &= \SI{25,0}{\celsius},&
-T_f &= \SI{45,0}{\celsius}.
+L_0 &= \SI{3,77}{\metre},&
+\alpha &= \SI{25e-6}{\per\celsius},&
+\Delta T &= \SI{32}{\celsius}.
 \end{align*}
-\ditanya\ (a) $c$; (b) kalor jenis molar $C$; (c) $n$.
+\ditanya\ Kenaikan titik tengah $x$.
 
-\konsep\ $Q=cm\,\Delta T$, kalor jenis molar $C=cM$ (J per mol per kelvin), dan jumlah mol $n=m/M$.
+\konsep\ Setelah memuai, panjang batang menjadi $L=L_0(1+\alpha\Delta T)$, sedangkan jarak antartumpuan tetap $L_0$. Tiap setengah batang (panjang $L/2$) menjadi sisi miring segitiga siku-siku dengan alas $L_0/2$ dan tinggi $x$.
 
 \penyelesaian
-
-\noindent\textbf{(a) Kalor jenis}
 \begin{align*}
-c &= \frac{Q}{m\,\Delta T} = \frac{\SI{314}{\joule}}{(\SI{0,0300}{\kilo\gram})(\SI{20,0}{\kelvin})}
-= \SI{523}{\joule\per\kilo\gram\per\kelvin}.
-\end{align*}
-
-\noindent\textbf{(b) Kalor jenis molar}
-\begin{align*}
-C &= cM = (\SI{523}{\joule\per\kilo\gram\per\kelvin})(\SI{0,0500}{\kilo\gram\per\mole})
-= \SI{26,2}{\joule\per\mole\per\kelvin}.
-\end{align*}
-
-\noindent\textbf{(c) Jumlah mol}
-\begin{align*}
-n &= \frac{m}{M} = \frac{\SI{30,0}{\gram}}{\SI{50,0}{\gram\per\mole}} = \SI{0,600}{\mole}.
+\alpha\Delta T &= (\SI{25e-6}{\per\celsius})(\SI{32}{\celsius}) = 8{,}0\times10^{-4},\\
+\left(\frac{L}{2}\right)^2 &= \left(\frac{L_0}{2}\right)^2 + x^2
+\;\Rightarrow\;
+x = \frac{L_0}{2}\sqrt{(1+\alpha\Delta T)^2-1}\\
+&\approx \frac{L_0}{2}\sqrt{2\alpha\Delta T}
+= \frac{\SI{3,77}{\metre}}{2}\sqrt{2(8{,}0\times10^{-4})}\\
+&= (\SI{1,885}{\metre})(0{,}0400) = \SI{7,5e-2}{\metre}.
 \end{align*}
 \begin{jawaban}
-(a) $c \approx \SI{523}{\joule\per\kilo\gram\per\kelvin}$ \quad
-(b) $C \approx \SI{26,2}{\joule\per\mole\per\kelvin}$ \quad
-(c) $n = \SI{0,600}{\mole}$.
+\[
+\boxed{x \approx \SI{7,5}{\centi\metre}}
+\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
 \soal{30}
-Sebuah sampel \SI{0,400}{\kilo\gram} ditempatkan pada alat pendingin yang mengambil energi sebagai kalor dengan laju tetap. Gambar pada soal memperlihatkan suhu $T$ sampel terhadap waktu $t$; skala waktu ditetapkan oleh $t_s=\SI{80,0}{\minute}$. Sampel membeku selama pengambilan energi. Kalor jenis sampel pada fase cair awalnya adalah \SI{3000}{\joule\per\kilo\gram\per\kelvin}. Tentukan (a) kalor lebur sampel dan (b) kalor jenisnya pada fase beku.
+Sebuah sampel \SI{0,400}{\kilo\gram} ditempatkan pada alat pendingin yang mengambil energi sebagai kalor dengan laju tetap. Gambar 18-33 memperlihatkan suhu $T$ sampel terhadap waktu $t$; skala horizontal ditetapkan oleh $t_s=\SI{80,0}{\minute}$. Sampel membeku selama pengambilan energi. Kalor jenis sampel pada fase cair awal adalah \SI{3000}{\joule\per\kilo\gram\per\kelvin}. Tentukan (a) kalor lebur sampel dan (b) kalor jenisnya pada fase beku.
 
 \IfFileExists{images/30.png}{%
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\linewidth]{images/30.png}
-  \caption{Suhu sampel terhadap waktu (gambar soal 30)}
+  \caption{Suhu sampel terhadap waktu (Gambar 18-33)}
 \end{figure}}{}
 
-\diketahui\ (nilai berikut \textbf{dibaca/disimpulkan dari grafik}; cocokkan dengan grafik di soal: pendinginan tetap berlangsung \SI{20}{\minute} untuk fase pembekuan dan \SI{20}{\minute} untuk fase padat, dengan penurunan suhu fase padat \SI{30}{\celsius}, dan laju pengambilan energi dari fase cair $P=\SI{22,5}{\watt}$)
+\diketahui\ (dibaca dari Gambar 18-33; setiap kotak mendatar sebesar \SI{10}{\minute}: fase cair \SI{300}{\kelvin}$\to$\SI{270}{\kelvin} pada $t=0$ sampai \SI{40}{\minute}; pembekuan pada \SI{270}{\kelvin} dari \SI{40}{\minute} sampai \SI{70}{\minute}; fase padat \SI{270}{\kelvin}$\to$\SI{250}{\kelvin} dari \SI{70}{\minute} sampai \SI{80}{\minute})
 \begin{align*}
 m &= \SI{0,400}{\kilo\gram},&
-c_{\text{cair}} &= \SI{3000}{\joule\per\kilo\gram\per\kelvin},&
-P &= \SI{22,5}{\watt},\\
-\Delta t_{\text{beku}} &= \SI{20}{\minute},&
-\Delta t_{\text{padat}} &= \SI{20}{\minute},&
-|\Delta T_{\text{padat}}| &= \SI{30}{\celsius}.
+c_{\text{cair}} &= \SI{3000}{\joule\per\kilo\gram\per\kelvin},\\
+\Delta T_{\text{cair}} &= \SI{30}{\kelvin}\ (\Delta t = \SI{40}{\minute}),&
+\Delta T_{\text{padat}} &= \SI{20}{\kelvin}\ (\Delta t = \SI{10}{\minute}),\\
+\Delta t_{\text{beku}} &= \SI{30}{\minute}.
 \end{align*}
 \ditanya\ (a) $L_F$; (b) $c_{\text{padat}}$.
 
-\konsep\ Laju pengambilan energi tetap, sehingga energi yang dikeluarkan pada tiap selang waktu adalah $Q=P\,\Delta t$. Pada pembekuan, $Q=L_Fm$ (suhu konstan). Pada fase padat, $Q=c_{\text{padat}}m|\Delta T|$. Laju $P$ ditentukan dari fase cair: $P=c_{\text{cair}}m|\Delta T_{\text{cair}}|/\Delta t_{\text{cair}}$.
+\konsep\ Laju pengambilan energi $P$ tetap, sehingga $Q=P\,\Delta t$ pada tiap selang. $P$ ditentukan dari fase cair: $P=c_{\text{cair}}m\,|\Delta T_{\text{cair}}|/\Delta t_{\text{cair}}$. Pada pembekuan $Q=L_Fm$ (suhu tetap), dan pada fase padat $Q=c_{\text{padat}}m|\Delta T_{\text{padat}}|$.
 
 \penyelesaian
 
+\noindent\textbf{Laju pengambilan energi (dari fase cair)}
+\begin{align*}
+P &= \frac{c_{\text{cair}}m|\Delta T_{\text{cair}}|}{\Delta t_{\text{cair}}}
+= \frac{(\SI{3000}{\joule\per\kilo\gram\per\kelvin})(\SI{0,400}{\kilo\gram})(\SI{30}{\kelvin})}{2400\,\si{\second}}
+= \SI{15,0}{\watt}.
+\end{align*}
+
 \noindent\textbf{(a) Kalor lebur}
 \begin{align*}
-Q_{\text{beku}} &= P\,\Delta t_{\text{beku}} = (\SI{22,5}{\watt})(1200\,\si{\second}) = \SI{2,70e4}{\joule},\\
-L_F &= \frac{Q_{\text{beku}}}{m} = \frac{\SI{2,70e4}{\joule}}{\SI{0,400}{\kilo\gram}}
-= \SI{6,75e4}{\joule\per\kilo\gram}.
+Q_{\text{beku}} &= P\,\Delta t_{\text{beku}} = (\SI{15,0}{\watt})(1800\,\si{\second}) = \SI{2,70e4}{\joule},\\
+L_F &= \frac{Q_{\text{beku}}}{m} = \frac{\SI{2,70e4}{\joule}}{\SI{0,400}{\kilo\gram}} = \SI{6,75e4}{\joule\per\kilo\gram}.
 \end{align*}
 
 \noindent\textbf{(b) Kalor jenis fase padat}
 \begin{align*}
-Q_{\text{padat}} &= P\,\Delta t_{\text{padat}} = \SI{2,70e4}{\joule},\\
+Q_{\text{padat}} &= P\,\Delta t_{\text{padat}} = (\SI{15,0}{\watt})(600\,\si{\second}) = \SI{9,0e3}{\joule},\\
 c_{\text{padat}} &= \frac{Q_{\text{padat}}}{m|\Delta T_{\text{padat}}|}
-= \frac{\SI{2,70e4}{\joule}}{(\SI{0,400}{\kilo\gram})(\SI{30}{\kelvin})}
-= \SI{2,25e3}{\joule\per\kilo\gram\per\kelvin}.
+= \frac{\SI{9,0e3}{\joule}}{(\SI{0,400}{\kilo\gram})(\SI{20}{\kelvin})}
+= \SI{1,1e3}{\joule\per\kilo\gram\per\kelvin}.
 \end{align*}
 \begin{jawaban}
 (a) $L_F \approx \SI{68}{\kilo\joule\per\kilo\gram}$ \quad
-(b) $c_{\text{padat}} \approx \SI{2,3}{\kilo\joule\per\kilo\gram\per\kelvin}$.
-
-Jika angka pada grafikmu berbeda, gunakan rumus $L_F=P\Delta t_{\text{beku}}/m$ dan $c_{\text{padat}}=P\Delta t_{\text{padat}}/(m|\Delta T_{\text{padat}}|)$.
+(b) $c_{\text{padat}} \approx \SI{1,1e3}{\joule\per\kilo\gram\per\kelvin}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2543,10 +2538,50 @@ T_f &= \frac{m_kcT_k-m_eL_F}{(m_k+m_e)c}\\
 \end{jawaban}
 
 % ---------------------------------------------------------------------
-\soal{82}
-Sebuah batang tembaga, sebuah batang aluminium, dan sebuah batang kuningan, masing-masing berpanjang $L=\SI{6,00}{\centi\metre}$ dan berdiameter $d=\SI{1,00}{\centi\metre}$, diletakkan berujung-ujung dengan batang aluminium berada di antara kedua batang lainnya. Ujung bebas batang tembaga dijaga pada titik didih air ($\SI{100}{\celsius}$) dan ujung bebas batang kuningan dijaga pada titik beku air ($\SI{0}{\celsius}$). Berapa suhu keadaan mantap (a) sambungan tembaga--aluminium dan (b) sambungan aluminium--kuningan?
+\soal{61}
+Lapisan es setebal \SI{5,0}{\centi\metre} terbentuk di atas tangki air di luar ruangan (Gambar 18-47). Udara bersuhu \SI{-10}{\celsius}. Tentukan laju pembentukan es (dalam sentimeter per jam). Es memiliki konduktivitas termal $0{,}0040\ \mathrm{cal/(s\cdot cm\cdot C^\circ)}$ dan massa jenis \SI{0,92}{\gram\per\centi\metre\cubed}. Anggap tidak ada perpindahan energi melalui dinding atau dasar tangki.
 
-\diketahui\ (ukuran batang dan suhu ujung dari ingatan soal edisi 10; $k$ dari Tabel 18-6. Ukuran batang tidak memengaruhi hasil asalkan sama untuk ketiganya)
+\IfFileExists{images/61.png}{%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.35\linewidth]{images/61.png}
+  \caption{Lapisan es di atas tangki air (Gambar 18-47)}
+\end{figure}}{}
+
+\diketahui\ (kalor lebur air $L_F=\SI{333}{\kilo\joule\per\kilo\gram}=79{,}5\ \mathrm{cal/g}$; permukaan bawah es berada pada \SI{0}{\celsius} karena berbatasan dengan air)
+\begin{align*}
+h &= \SI{5,0}{\centi\metre},&
+T_{\text{udara}} &= \SI{-10}{\celsius},&
+T_{\text{bawah}} &= \SI{0}{\celsius},\\
+k &= 0{,}0040\ \mathrm{cal/(s\cdot cm\cdot C^\circ)},&
+\rho &= \SI{0,92}{\gram\per\centi\metre\cubed},&
+L_F &= 79{,}5\ \mathrm{cal/g}.
+\end{align*}
+\ditanya\ Laju pertumbuhan tebal es $dh/dt$.
+
+\konsep\ Pada keadaan mantap, kalor yang dilepas air saat membeku di dasar lapisan es dikonduksikan ke atas melalui es: $P=kA\dfrac{\Delta T}{h}$. Massa es yang terbentuk per satuan waktu adalah $\dfrac{dm}{dt}=\rho A\dfrac{dh}{dt}$ dan kalor yang dilepas $P=L_F\dfrac{dm}{dt}$.
+
+\penyelesaian
+\begin{align*}
+kA\frac{\Delta T}{h} &= L_F\rho A\frac{dh}{dt}
+\;\Rightarrow\;
+\frac{dh}{dt}=\frac{k\,\Delta T}{\rho L_F\,h}\\
+&= \frac{(0{,}0040)(10)}{(0{,}92)(79{,}5)(5{,}0)}\,\si{\centi\metre\per\second}
+= \SI{1,09e-4}{\centi\metre\per\second},\\
+\frac{dh}{dt} &= (\SI{1,09e-4}{\centi\metre\per\second})(3600\,\si{\second\per\hour})
+= \SI{0,39}{\centi\metre\per\hour}.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{\frac{dh}{dt}\approx\SI{0,39}{\centi\metre\per\hour}}
+\]
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{82}
+Sebuah batang tembaga, sebuah batang aluminium, dan sebuah batang kuningan, masing-masing berpanjang $L=\SI{6,00}{\metre}$ dan berdiameter $d=\SI{1,00}{\centi\metre}$, diletakkan berujung-ujung dengan batang aluminium berada di antara kedua batang lainnya. Ujung bebas batang tembaga dijaga pada titik didih air ($\SI{100}{\celsius}$) dan ujung bebas batang kuningan dijaga pada titik beku air ($\SI{0}{\celsius}$). Berapa suhu keadaan mantap (a) sambungan tembaga--aluminium dan (b) sambungan aluminium--kuningan?
+
+\diketahui\ ($k$ dari Tabel 18-6; ukuran batang tidak memengaruhi hasil karena sama untuk ketiganya)
 \begin{align*}
 k_{\mathrm{Cu}} &= \SI{401}{\watt\per\metre\per\kelvin},&
 k_{\mathrm{Al}} &= \SI{235}{\watt\per\metre\per\kelvin},&
@@ -2572,19 +2607,116 @@ T_2 &= T_1-\Delta T_{\mathrm{Al}} = \SI{57,6}{\celsius}.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
-% >>> Soal Bab 18 yang masih perlu dikerjakan (teks soal belum tersedia):
-% \soal{61}
-% \soal{89}
-% \soal{96}
-% \soal{103}
-% Urutkan sesuai nomor: 61 setelah 35, 82 sudah di atas; 89, 96, 103 setelah 82.
+\soal{89}
+Seorang atlet perlu menurunkan berat badan dan memutuskan melakukannya dengan "angkat besi". (a) Berapa kali beban \SI{80,0}{\kilo\gram} harus diangkat setinggi \SI{1,00}{\metre} untuk membakar $\num{1,00}$ lb lemak, dengan anggapan lemak sebanyak itu setara dengan $3500\ \text{Cal}$? (b) Jika beban diangkat sekali tiap \SI{2,00}{\second}, berapa lama pekerjaan itu berlangsung?
+
+\diketahui\ ($1\ \text{Cal}=1\ \text{kkal}=\SI{4186}{\joule}$)
+\begin{align*}
+m &= \SI{80,0}{\kilo\gram},&
+h &= \SI{1,00}{\metre},&
+E &= 3500\ \text{Cal},&
+\Delta t &= \SI{2,00}{\second}\text{ per angkatan}.
+\end{align*}
+\ditanya\ (a) Banyak angkatan $N$; (b) lama total $t$.
+
+\konsep\ Kerja untuk satu angkatan adalah kenaikan energi potensial gravitasi $W_1=mgh$. Banyak angkatan $N=E/W_1$, dan lama total $t=N\,\Delta t$.
+
+\penyelesaian
+
+\noindent\textbf{(a) Banyak angkatan}
+\begin{align*}
+E &= (3500)(\SI{4186}{\joule}) = \SI{1,465e7}{\joule},\\
+W_1 &= mgh = (\SI{80,0}{\kilo\gram})(\SI{9,8}{\metre\per\second\squared})(\SI{1,00}{\metre}) = \SI{784}{\joule},\\
+N &= \frac{E}{W_1} = \frac{\SI{1,465e7}{\joule}}{\SI{784}{\joule}} = \num{1,87e4}.
+\end{align*}
+
+\noindent\textbf{(b) Lama pekerjaan}
+\begin{align*}
+t &= N\,\Delta t = (\num{1,87e4})(\SI{2,00}{\second}) = \SI{3,74e4}{\second} = \SI{10,4}{\hour}.
+\end{align*}
+\begin{jawaban}
+(a) $N \approx \num{1,87e4}$ kali \quad (b) $t \approx \SI{10,4}{\hour}$.
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{96}
+Gambar 18-59 memperlihatkan batang gabungan sepanjang $L=L_1+L_2$ yang terdiri atas dua bahan. Bahan pertama memiliki panjang $L_1$ dan koefisien muai linear $\alpha_1$; bahan kedua memiliki panjang $L_2$ dan koefisien $\alpha_2$. (a) Berapa koefisien muai linear $\alpha$ batang gabungan? Untuk batang gabungan tertentu, $L=\SI{52,4}{\centi\metre}$, bahan 1 adalah baja, dan bahan 2 adalah kuningan. Jika $\alpha=\SI{1,3e-5}{\per\celsius}$, berapa panjang (b) $L_1$ dan (c) $L_2$?
+
+\IfFileExists{images/96.png}{%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\linewidth]{images/96.png}
+  \caption{Batang gabungan dua bahan (Gambar 18-59)}
+\end{figure}}{}
+
+\diketahui\ ($\alpha$ dari Tabel 18-2)
+\begin{align*}
+L &= \SI{52,4}{\centi\metre},&
+\alpha &= \SI{13e-6}{\per\celsius},\\
+\alpha_{\text{baja}} &= \SI{11e-6}{\per\celsius},&
+\alpha_{\text{kuningan}} &= \SI{19e-6}{\per\celsius}.
+\end{align*}
+\ditanya\ (a) $\alpha$ dalam $\alpha_1,\alpha_2,L_1,L_2$; (b) $L_1$; (c) $L_2$.
+
+\konsep\ Pertambahan panjang total sama dengan jumlah pertambahan panjang tiap bahan: $\Delta L=\Delta L_1+\Delta L_2$, dengan $\Delta L=\alpha L\,\Delta T$.
+
+\penyelesaian
+
+\noindent\textbf{(a) Koefisien muai gabungan}
+\begin{align*}
+\alpha L\,\Delta T &= \alpha_1L_1\,\Delta T+\alpha_2L_2\,\Delta T
+\;\Rightarrow\;
+\alpha=\frac{\alpha_1L_1+\alpha_2L_2}{L}.
+\end{align*}
+
+\noindent\textbf{(b), (c) Panjang masing-masing bahan}
+
+Dengan $L_2=L-L_1$:
+\begin{align*}
+\alpha L &= \alpha_1L_1+\alpha_2(L-L_1)
+\;\Rightarrow\;
+L_1=L\,\frac{\alpha_2-\alpha}{\alpha_2-\alpha_1}\\
+&= (\SI{52,4}{\centi\metre})\frac{19-13}{19-11} = \SI{39,3}{\centi\metre},\\
+L_2 &= L-L_1 = \SI{52,4}{\centi\metre}-\SI{39,3}{\centi\metre} = \SI{13,1}{\centi\metre}.
+\end{align*}
+\begin{jawaban}
+(a) $\alpha=\dfrac{\alpha_1L_1+\alpha_2L_2}{L}$ \quad
+(b) $L_1\approx\SI{39,3}{\centi\metre}$ \quad (c) $L_2\approx\SI{13,1}{\centi\metre}$.
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{103}
+Luas pelat persegi panjang adalah $A=ab=\SI{1,4}{\metre\squared}$ dan koefisien muai liniernya $\alpha=\SI{32e-6}{\per\celsius}$. Setelah kenaikan suhu $\Delta T=\SI{89}{\celsius}$, sisi $a$ bertambah panjang sebesar $\Delta a$ dan sisi $b$ sebesar $\Delta b$ (Gambar 18-61). Dengan mengabaikan besaran kecil $(\Delta a\,\Delta b)/(ab)$, tentukan $\Delta A$.
+
+\diketahui
+\begin{align*}
+A &= ab = \SI{1,4}{\metre\squared},&
+\alpha &= \SI{32e-6}{\per\celsius},&
+\Delta T &= \SI{89}{\celsius}.
+\end{align*}
+\ditanya\ Pertambahan luas $\Delta A$.
+
+\konsep\ $A'=(a+\Delta a)(b+\Delta b)$ dengan $\Delta a=a\alpha\Delta T$ dan $\Delta b=b\alpha\Delta T$.
+
+\penyelesaian
+\begin{align*}
+\Delta A &= (a+\Delta a)(b+\Delta b)-ab = a\,\Delta b+b\,\Delta a+\Delta a\,\Delta b\\
+&\approx a\,\Delta b+b\,\Delta a \qquad(\Delta a\,\Delta b\ \text{diabaikan})\\
+&= ab\,\alpha\Delta T+ab\,\alpha\Delta T = 2A\alpha\,\Delta T\\
+&= 2(\SI{1,4}{\metre\squared})(\SI{32e-6}{\per\celsius})(\SI{89}{\celsius})
+= \SI{8,0e-3}{\metre\squared}.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{\Delta A \approx \SI{8,0e-3}{\metre\squared}}
+\]
+\end{jawaban}
 
 % =====================================================================
 % BAB 19 -- TEORI KINETIK GAS   (potongan untuk ditempel ke main.tex)
 % Memakai makro yang sudah ada di main.tex: \bab, \soal, rumusutama,
 % \diketahui, \ditanya, \konsep, \penyelesaian, jawaban.
 % Tempel setelah Bab 18 dan sebelum Bab 20.
-% Soal 18, 30, 44, 63, 64, dan 78 BELUM dikerjakan (teks soal belum ada).
 % =====================================================================
 \bab{19}{Teori Kinetik Gas}
 
@@ -2608,6 +2740,32 @@ T_2 &= T_1-\Delta T_{\mathrm{Al}} = \SI{57,6}{\celsius}.
 \end{itemize}
 \par\smallskip\noindent\footnotesize Rumus mengacu pada \cite{halliday}.
 \end{rumusutama}
+
+% ---------------------------------------------------------------------
+\soal{18}
+Suhu dan tekanan di atmosfer Matahari adalah \SI{2,00e6}{\kelvin} dan \SI{0,0300}{\pascal}. Hitung laju rms elektron bebas (massa \SI{9,11e-31}{\kilo\gram}) di sana, dengan menganggapnya gas ideal.
+
+\diketahui
+\begin{align*}
+T &= \SI{2,00e6}{\kelvin},&
+p &= \SI{0,0300}{\pascal},&
+m &= \SI{9,11e-31}{\kilo\gram}.
+\end{align*}
+\ditanya\ $v_{\text{rms}}$ elektron.
+
+\konsep\ Untuk gas ideal, $\tfrac12 m v_{\text{rms}}^2=\tfrac32kT$, sehingga $v_{\text{rms}}=\sqrt{3kT/m}$. Tekanan tidak diperlukan, karena laju rms hanya bergantung pada suhu dan massa partikel.
+
+\penyelesaian
+\begin{align*}
+v_{\text{rms}} &= \sqrt{\frac{3kT}{m}}
+= \sqrt{\frac{3(\SI{1,38e-23}{\joule\per\kelvin})(\SI{2,00e6}{\kelvin})}{\SI{9,11e-31}{\kilo\gram}}}
+= \SI{9,53e6}{\metre\per\second}.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{v_{\text{rms}}\approx\SI{9,53e6}{\metre\per\second}}
+\]
+\end{jawaban}
 
 % ---------------------------------------------------------------------
 \soal{28}
@@ -2640,6 +2798,31 @@ f &= \frac{v}{\lambda_{\text{lbr}}} = \frac{\SI{343}{\metre\per\second}}{\SI{9,3
 \end{jawaban}
 
 % ---------------------------------------------------------------------
+\soal{30}
+Lintasan bebas rata-rata molekul nitrogen pada \SI{0,0}{\celsius} dan \SI{1,0}{\atm} adalah \SI{0,80e-5}{\centi\metre}. Pada suhu dan tekanan ini terdapat $2{,}7\times10^{19}$ molekul$/\mathrm{cm^3}$. Berapa diameter molekul?
+
+\diketahui
+\begin{align*}
+\lambda &= \SI{0,80e-5}{\centi\metre}=\SI{8,0e-8}{\metre},&
+\frac{N}{V} &= \SI{2,7e19}{\per\centi\metre\cubed}=\SI{2,7e25}{\per\metre\cubed}.
+\end{align*}
+\ditanya\ Diameter molekul $d$.
+
+\konsep\ Lintasan bebas rata-rata $\lambda=\dfrac{1}{\sqrt2\,\pi d^2\,N/V}$, sehingga $d=\sqrt{\dfrac{1}{\sqrt2\,\pi\,\lambda\,(N/V)}}$.
+
+\penyelesaian
+\begin{align*}
+d &= \sqrt{\frac{1}{\sqrt2\,\pi\,(\SI{8,0e-8}{\metre})(\SI{2,7e25}{\per\metre\cubed})}}
+= \sqrt{\frac{1}{9{,}6\times10^{18}}}\,\si{\metre}\\
+&= \SI{3,2e-10}{\metre}.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{d\approx\SI{3,2e-10}{\metre}=\SI{3,2e-8}{\centi\metre}}
+\]
+\end{jawaban}
+
+% ---------------------------------------------------------------------
 \soal{33}
 Laju \num{10} molekul adalah \num{2,0}, \num{3,0}, \num{4,0}, \dots, \SI{11}{\kilo\metre\per\second}. Berapa (a) laju rata-rata dan (b) laju rms molekul-molekul tersebut?
 
@@ -2667,6 +2850,59 @@ v_{\text{rms}} &= \sqrt{\frac{505}{10}}\,\si{\kilo\metre\per\second} = \SI{7,1}{
 \end{align*}
 \begin{jawaban}
 (a) $v_{\text{rata}} = \SI{6,5}{\kilo\metre\per\second}$ \quad (b) $v_{\text{rms}} \approx \SI{7,1}{\kilo\metre\per\second}$.
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{44}
+Satu mol gas ideal diatomik bergerak dari $a$ ke $c$ sepanjang lintasan diagonal pada Gambar 19-25. Skala sumbu vertikal ditetapkan oleh $p_{ab}=\SI{5,0}{\kilo\pascal}$ dan $p_c=\SI{2,0}{\kilo\pascal}$, dan skala sumbu horizontal oleh $V_{bc}=\SI{4,0}{\metre\cubed}$ dan $V_a=\SI{2,0}{\metre\cubed}$. Selama transisi, (a) berapa perubahan energi dalam gas, dan (b) berapa banyak energi yang ditambahkan ke gas sebagai kalor? (c) Berapa kalor yang diperlukan bila gas bergerak dari $a$ ke $c$ melalui lintasan tidak langsung $abc$?
+
+\IfFileExists{images/44.png}{%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\linewidth]{images/44.png}
+  \caption{Diagram $p$-$V$ gas diatomik (Gambar 19-25)}
+\end{figure}}{}
+
+\diketahui\ (dari Gambar 19-25: $a=(V_a,p_{ab})$, $b=(V_{bc},p_{ab})$, $c=(V_{bc},p_c)$)
+\begin{align*}
+p_{ab} &= \SI{5,0}{\kilo\pascal},&
+p_c &= \SI{2,0}{\kilo\pascal},&
+V_a &= \SI{2,0}{\metre\cubed},&
+V_{bc} &= \SI{4,0}{\metre\cubed},&
+n &= \SI{1}{\mole}.
+\end{align*}
+\ditanya\ (a) $\Delta E_{\text{int}}$ ($a\to c$); (b) $Q$ ($a\to c$ diagonal); (c) $Q$ lewat $abc$.
+
+\konsep\ Untuk gas ideal diatomik ($C_V=\tfrac52R$), $\Delta E_{\text{int}}=nC_V\Delta T=\tfrac52(p_fV_f-p_iV_i)$, hanya bergantung pada keadaan awal dan akhir. Usaha oleh gas sama dengan luas di bawah kurva pada diagram $p$-$V$, dan $Q=\Delta E_{\text{int}}+W$.
+
+\penyelesaian
+
+\noindent\textbf{(a) Perubahan energi dalam}
+\begin{align*}
+\Delta E_{\text{int}} &= \tfrac52\left(p_cV_{bc}-p_{ab}V_a\right)
+= \tfrac52\left[(\SI{2,0e3}{\pascal})(\SI{4,0}{\metre\cubed})-(\SI{5,0e3}{\pascal})(\SI{2,0}{\metre\cubed})\right]\\
+&= \tfrac52(8{,}0-10{,}0)\times10^3\,\si{\joule} = -\SI{5,0e3}{\joule}.
+\end{align*}
+
+\noindent\textbf{(b) Kalor sepanjang lintasan diagonal}
+
+Usaha adalah luas trapesium di bawah garis $a\to c$:
+\begin{align*}
+W_{ac} &= \tfrac12(p_{ab}+p_c)(V_{bc}-V_a) = \tfrac12(\SI{7,0e3}{\pascal})(\SI{2,0}{\metre\cubed}) = \SI{7,0e3}{\joule},\\
+Q_{ac} &= \Delta E_{\text{int}}+W_{ac} = -\SI{5,0e3}{\joule}+\SI{7,0e3}{\joule} = \SI{2,0e3}{\joule}.
+\end{align*}
+
+\noindent\textbf{(c) Kalor sepanjang lintasan $abc$}
+
+Usaha hanya terjadi pada $a\to b$ (tekanan tetap); $b\to c$ berlangsung pada volume tetap ($W=0$):
+\begin{align*}
+W_{abc} &= p_{ab}(V_{bc}-V_a) = (\SI{5,0e3}{\pascal})(\SI{2,0}{\metre\cubed}) = \SI{1,0e4}{\joule},\\
+Q_{abc} &= \Delta E_{\text{int}}+W_{abc} = -\SI{5,0e3}{\joule}+\SI{1,0e4}{\joule} = \SI{5,0e3}{\joule}.
+\end{align*}
+\begin{jawaban}
+(a) $\Delta E_{\text{int}}=-\SI{5,0}{\kilo\joule}$ \quad
+(b) $Q=\SI{2,0}{\kilo\joule}$ \quad
+(c) $Q=\SI{5,0}{\kilo\joule}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2705,8 +2941,112 @@ T_f &= T_i\left(\frac{V_i}{V_f}\right)^{\gamma-1}
 \end{jawaban}
 
 % ---------------------------------------------------------------------
+\soal{63}
+Gambar 19-27 memperlihatkan siklus yang dijalani \SI{1,00}{\mole} gas ideal monoatomik. Suhunya $T_1=\SI{300}{\kelvin}$, $T_2=\SI{600}{\kelvin}$, dan $T_3=\SI{455}{\kelvin}$. Untuk $1\to2$, berapa (a) kalor $Q$, (b) perubahan energi dalam $\Delta E_{\text{int}}$, dan (c) usaha $W$ oleh gas? Untuk $2\to3$, berapa (d) $Q$, (e) $\Delta E_{\text{int}}$, dan (f) $W$? Untuk $3\to1$, berapa (g) $Q$, (h) $\Delta E_{\text{int}}$, dan (i) $W$? Untuk satu siklus penuh, berapa (j) $Q$, (k) $\Delta E_{\text{int}}$, dan (l) $W$? Tekanan awal di titik 1 adalah \SI{1,00}{\atm} ($=\SI{1,013e5}{\pascal}$). Berapa (m) volume dan (n) tekanan di titik 2, serta (o) volume dan (p) tekanan di titik 3?
+
+\IfFileExists{images/63.png}{%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\linewidth]{images/63.png}
+  \caption{Siklus gas ideal monoatomik (Gambar 19-27)}
+\end{figure}}{}
+
+\diketahui\ (dari Gambar 19-27: $1\to2$ volume tetap, $2\to3$ adiabatik, $3\to1$ tekanan tetap)
+\begin{align*}
+n &= \SI{1,00}{\mole},&
+T_1 &= \SI{300}{\kelvin},&
+T_2 &= \SI{600}{\kelvin},\\
+T_3 &= \SI{455}{\kelvin},&
+p_1 &= \SI{1,013e5}{\pascal}.
+\end{align*}
+\ditanya\ $Q$, $\Delta E_{\text{int}}$, $W$ tiap proses dan satu siklus; $V_2$, $p_2$, $V_3$, $p_3$.
+
+\konsep\ Gas monoatomik: $C_V=\tfrac32R$ dan $C_p=\tfrac52R$. $\Delta E_{\text{int}}=nC_V\Delta T$ untuk semua proses, $Q=nC_V\Delta T$ (volume tetap), $Q=nC_p\Delta T$ (tekanan tetap), $Q=0$ (adiabatik), dan $W=Q-\Delta E_{\text{int}}$.
+
+\penyelesaian
+
+\noindent\textbf{Proses $1\to2$ (volume tetap)}
+\begin{align*}
+W_{12} &= 0,\\
+\Delta E_{\text{int},12} &= nC_V(T_2-T_1) = (1{,}00)(\tfrac32)(8{,}314)(300)\,\si{\joule} = \SI{3,74e3}{\joule},\\
+Q_{12} &= \Delta E_{\text{int},12} = \SI{3,74e3}{\joule}.
+\end{align*}
+
+\noindent\textbf{Proses $2\to3$ (adiabatik)}
+\begin{align*}
+Q_{23} &= 0,\\
+\Delta E_{\text{int},23} &= nC_V(T_3-T_2) = (\tfrac32)(8{,}314)(455-600)\,\si{\joule} = -\SI{1,81e3}{\joule},\\
+W_{23} &= -\Delta E_{\text{int},23} = \SI{1,81e3}{\joule}.
+\end{align*}
+
+\noindent\textbf{Proses $3\to1$ (tekanan tetap)}
+\begin{align*}
+\Delta E_{\text{int},31} &= nC_V(T_1-T_3) = (\tfrac32)(8{,}314)(300-455)\,\si{\joule} = -\SI{1,93e3}{\joule},\\
+Q_{31} &= nC_p(T_1-T_3) = (\tfrac52)(8{,}314)(300-455)\,\si{\joule} = -\SI{3,22e3}{\joule},\\
+W_{31} &= Q_{31}-\Delta E_{\text{int},31} = -\SI{1,29e3}{\joule}\quad(=nR(T_1-T_3)).
+\end{align*}
+
+\noindent\textbf{Satu siklus penuh}
+\begin{align*}
+Q &= 3{,}74-0-3{,}22 = \SI{5,2e2}{\joule},\\
+\Delta E_{\text{int}} &= 3{,}74-1{,}81-1{,}93 = 0,\\
+W &= 0+1{,}81-1{,}29 = \SI{5,2e2}{\joule}.
+\end{align*}
+
+\noindent\textbf{Volume dan tekanan}
+\begin{align*}
+V_1 &= \frac{nRT_1}{p_1} = \frac{(1{,}00)(8{,}314)(300)}{\SI{1,013e5}{\pascal}}\,\si{\metre\cubed} = \SI{2,46e-2}{\metre\cubed},\\
+V_2 &= V_1 = \SI{2,46e-2}{\metre\cubed},\\
+p_2 &= p_1\frac{T_2}{T_1} = \SI{2,03e5}{\pascal}\;(=\SI{2,00}{\atm}),\\
+p_3 &= p_1 = \SI{1,013e5}{\pascal}\;(=\SI{1,00}{\atm}),\\
+V_3 &= \frac{nRT_3}{p_3} = \frac{(1{,}00)(8{,}314)(455)}{\SI{1,013e5}{\pascal}}\,\si{\metre\cubed} = \SI{3,73e-2}{\metre\cubed}.
+\end{align*}
+\begin{jawaban}
+\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccc@{}}
+ & $Q$ (J) & $\Delta E_{\text{int}}$ (J) & $W$ (J) \\
+$1\to2$ (a--c) & \num{3,74e3} & \num{3,74e3} & $0$ \\
+$2\to3$ (d--f) & $0$ & $-\num{1,81e3}$ & \num{1,81e3} \\
+$3\to1$ (g--i) & $-\num{3,22e3}$ & $-\num{1,93e3}$ & $-\num{1,29e3}$ \\
+Siklus (j--l) & \num{5,2e2} & $0$ & \num{5,2e2} \\
+\end{tabular}
+
+(m) $V_2=\SI{2,46e-2}{\metre\cubed}$ \quad (n) $p_2=\SI{2,03e5}{\pascal}$ (\SI{2,00}{\atm}) \quad
+(o) $V_3=\SI{3,73e-2}{\metre\cubed}$ \quad (p) $p_3=\SI{1,013e5}{\pascal}$ (\SI{1,00}{\atm}).
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{64}
+Hitung usaha yang dilakukan oleh agen luar selama pemampatan isotermal \SI{1,00}{\mole} oksigen dari volume \SI{22,4}{\litre} pada \SI{0}{\celsius} dan \SI{1,00}{\atm} menjadi volume \SI{16,8}{\litre}.
+
+\diketahui
+\begin{align*}
+n &= \SI{1,00}{\mole},&
+T &= \SI{273}{\kelvin},&
+V_i &= \SI{22,4}{\litre},&
+V_f &= \SI{16,8}{\litre}.
+\end{align*}
+\ditanya\ Usaha oleh agen luar $W_{\text{luar}}$.
+
+\konsep\ Usaha oleh gas pada proses isotermal: $W_{\text{gas}}=nRT\ln\dfrac{V_f}{V_i}$. Usaha oleh agen luar sama besar dengan $-W_{\text{gas}}$.
+
+\penyelesaian
+\begin{align*}
+W_{\text{gas}} &= nRT\ln\frac{V_f}{V_i}
+= (1{,}00)(\SI{8,31}{\joule\per\mole\per\kelvin})(\SI{273}{\kelvin})\ln\frac{16{,}8}{22{,}4}\\
+&= (\SI{2,27e3}{\joule})(-0{,}288) = -\SI{653}{\joule},\\
+W_{\text{luar}} &= -W_{\text{gas}} = +\SI{653}{\joule}.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{W_{\text{luar}}\approx\SI{653}{\joule}}
+\]
+(gas melakukan usaha $-\SI{653}{\joule}$ karena dimampatkan).
+\end{jawaban}
+
+% ---------------------------------------------------------------------
 \soal{75}
-Suhu \SI{3,00}{\mole} suatu gas dengan $C_V=6{,}00\ \mathrm{cal/mol\cdot K}$ dinaikkan sebesar \SI{50,0}{\kelvin}. Jika prosesnya pada volume tetap, berapa (a) kalor $Q$, (b) usaha $W$ oleh gas, (c) perubahan energi dalam $\Delta E_{\text{int}}$, dan (d) perubahan energi kinetik translasi rata-rata per atom $\Delta K_{\text{rata}}$? Jika prosesnya pada tekanan tetap, berapa (e) $Q$, (f) $W$, (g) $\Delta E_{\text{int}}$, dan (h) $\Delta K_{\text{rata}}$? Jika prosesnya adiabatik, berapa (i) $Q$, (j) $W$, (k) $\Delta E_{\text{int}}$, dan (l) $\Delta K_{\text{rata}}$?
+Suhu \SI{3,00}{\mole} suatu gas dengan $C_V=6{,}00\ \mathrm{cal/mol\cdot K}$ akan dinaikkan sebesar \SI{50,0}{\kelvin}. Jika prosesnya pada volume tetap, berapa (a) energi yang dipindahkan sebagai kalor $Q$, (b) usaha $W$ oleh gas, (c) perubahan energi dalam $\Delta E_{\text{int}}$, dan (d) perubahan energi kinetik translasi \textit{total} $\Delta K$? Jika prosesnya pada tekanan tetap, berapa (e) $Q$, (f) $W$, (g) $\Delta E_{\text{int}}$, dan (h) $\Delta K$? Jika prosesnya adiabatik, berapa (i) $Q$, (j) $W$, (k) $\Delta E_{\text{int}}$, dan (l) $\Delta K$?
 
 \diketahui\ ($1\ \mathrm{cal}=\SI{4,186}{\joule}$)
 \begin{align*}
@@ -2714,16 +3054,16 @@ n &= \SI{3,00}{\mole},&
 C_V &= 6{,}00\ \mathrm{cal/(mol\cdot K)}=\SI{25,1}{\joule\per\mole\per\kelvin},&
 \Delta T &= \SI{50,0}{\kelvin}.
 \end{align*}
-\ditanya\ $Q$, $W$, $\Delta E_{\text{int}}$, $\Delta K_{\text{rata}}$ untuk proses volume tetap, tekanan tetap, dan adiabatik.
+\ditanya\ $Q$, $W$, $\Delta E_{\text{int}}$, $\Delta K$ untuk proses volume tetap, tekanan tetap, dan adiabatik.
 
-\konsep\ Untuk gas ideal, $\Delta E_{\text{int}}=nC_V\Delta T$ untuk \textit{semua} proses yang memiliki $\Delta T$ yang sama, dan $\Delta K_{\text{rata}}=\tfrac32k\,\Delta T$ (energi kinetik translasi per atom hanya bergantung pada suhu). Hukum Pertama: $\Delta E_{\text{int}}=Q-W$. Volume tetap: $W=0$. Tekanan tetap: $Q=nC_p\Delta T$ dengan $C_p=C_V+R$ dan $W=nR\Delta T$. Adiabatik: $Q=0$.
+\konsep\ Untuk gas ideal, $\Delta E_{\text{int}}=nC_V\Delta T$ untuk \textit{semua} proses yang memiliki $\Delta T$ yang sama, dan perubahan energi kinetik translasi total $\Delta K=\tfrac32nR\,\Delta T$ (hanya bergantung pada $\Delta T$). Hukum Pertama: $\Delta E_{\text{int}}=Q-W$. Volume tetap: $W=0$. Tekanan tetap: $Q=nC_p\Delta T$ dengan $C_p=C_V+R$ dan $W=nR\Delta T$. Adiabatik: $Q=0$.
 
 \penyelesaian
 
 \noindent\textbf{Besaran yang sama untuk ketiga proses}
 \begin{align*}
 \Delta E_{\text{int}} &= nC_V\Delta T = (3{,}00)(\SI{25,1}{\joule\per\mole\per\kelvin})(\SI{50,0}{\kelvin}) = \SI{3,77e3}{\joule},\\
-\Delta K_{\text{rata}} &= \tfrac32k\,\Delta T = \tfrac32(\SI{1,38e-23}{\joule\per\kelvin})(\SI{50,0}{\kelvin}) = \SI{1,04e-21}{\joule}.
+\Delta K &= \tfrac32 nR\,\Delta T = \tfrac32(3{,}00)(\SI{8,31}{\joule\per\mole\per\kelvin})(\SI{50,0}{\kelvin}) = \SI{1,87e3}{\joule}.
 \end{align*}
 
 \noindent\textbf{(a)--(d) Volume tetap}
@@ -2746,26 +3086,54 @@ Q &= 0,\qquad W = Q-\Delta E_{\text{int}} = -\SI{3,77e3}{\joule}.
 \begin{jawaban}
 \small\setlength{\tabcolsep}{4pt}
 \begin{tabular}{@{}lcccc@{}}
- & $Q$ (J) & $W$ (J) & $\Delta E_{\text{int}}$ (J) & $\Delta K_{\text{rata}}$ (J) \\
-Volume tetap (a--d) & \num{3,77e3} & $0$ & \num{3,77e3} & \num{1,04e-21} \\
-Tekanan tetap (e--h) & \num{5,01e3} & \num{1,25e3} & \num{3,77e3} & \num{1,04e-21} \\
-Adiabatik (i--l) & $0$ & $-\num{3,77e3}$ & \num{3,77e3} & \num{1,04e-21} \\
+ & $Q$ (J) & $W$ (J) & $\Delta E_{\text{int}}$ (J) & $\Delta K$ (J) \\
+Volume tetap (a--d) & \num{3,77e3} & $0$ & \num{3,77e3} & \num{1,87e3} \\
+Tekanan tetap (e--h) & \num{5,01e3} & \num{1,25e3} & \num{3,77e3} & \num{1,87e3} \\
+Adiabatik (i--l) & $0$ & $-\num{3,77e3}$ & \num{3,77e3} & \num{1,87e3} \\
 \end{tabular}
 \end{jawaban}
 
 % ---------------------------------------------------------------------
-% >>> Soal Bab 19 yang masih perlu dikerjakan (teks soal belum tersedia):
-% \soal{18}
-% \soal{30}
-% \soal{44}
-% \soal{63}
-% \soal{64}
-% \soal{78}
-% Letakkan sesuai urutan nomor (18 sebelum 28; 30 setelah 28; 44 setelah 33; 63, 64 setelah 55; 78 setelah 75).
+\soal{78}
+(a) Gas ideal dengan tekanan awal $p_0$ mengalami ekspansi bebas sampai volumenya \num{3,00} kali volume awal. Berapa perbandingan tekanannya terhadap $p_0$? (b) Gas kemudian dimampatkan secara perlahan dan adiabatik sampai volume semula. Tekanan setelah pemampatan adalah $(3{,}00)^{1/3}p_0$. Apakah gas ini monoatomik, diatomik, atau poliatomik? (c) Berapa perbandingan energi kinetik rata-rata per molekul pada keadaan akhir ini terhadap keadaan awal?
 
-% ======================================================================
-% BAB 20  --  Entropi dan Hukum Kedua Termodinamika
-% ======================================================================
+\diketahui
+\begin{align*}
+V_1 &= 3{,}00\,V_0\ (\text{setelah ekspansi bebas}),\\
+p_{\text{akhir}} &= (3{,}00)^{1/3}p_0\ (\text{setelah pemampatan adiabatik ke } V_0).
+\end{align*}
+\ditanya\ (a) $p_1/p_0$; (b) jenis gas ($\gamma$); (c) $K_{\text{akhir}}/K_{\text{awal}}$.
+
+\konsep\ Pada ekspansi bebas $Q=0$ dan $W=0$ sehingga $\Delta E_{\text{int}}=0$: suhu gas ideal tidak berubah. Pada pemampatan adiabatik berlaku $pV^{\gamma}=\text{konstan}$ dan $TV^{\gamma-1}=\text{konstan}$. Energi kinetik rata-rata per molekul sebanding dengan $T$.
+
+\penyelesaian
+
+\noindent\textbf{(a) Ekspansi bebas}
+
+Suhu tetap, sehingga $p_0V_0=p_1(3{,}00V_0)$:
+\begin{align*}
+\frac{p_1}{p_0} &= \frac{1}{3{,}00} = 0{,}333.
+\end{align*}
+
+\noindent\textbf{(b) Jenis gas}
+
+Pemampatan adiabatik dari $3V_0$ ke $V_0$:
+\begin{align*}
+p_1(3V_0)^{\gamma} &= p_{\text{akhir}}V_0^{\gamma}
+\;\Rightarrow\;
+p_{\text{akhir}} = \frac{p_0}{3}\,3^{\gamma} = 3^{\gamma-1}p_0.
+\end{align*}
+Diketahui $p_{\text{akhir}}=3^{1/3}p_0$, sehingga $\gamma-1=\tfrac13$ dan $\gamma=\tfrac43$. Karena $\gamma=\dfrac{f+2}{f}=\dfrac43$ memberi $f=6$ (tiga derajat kebebasan translasi dan tiga rotasi), gas ini \textbf{poliatomik}.
+
+\noindent\textbf{(c) Energi kinetik rata-rata}
+\begin{align*}
+\frac{T_{\text{akhir}}}{T_{\text{awal}}} &= \left(\frac{3V_0}{V_0}\right)^{\gamma-1} = 3^{1/3} = 1{,}44,
+\qquad
+\frac{K_{\text{akhir}}}{K_{\text{awal}}} = \frac{T_{\text{akhir}}}{T_{\text{awal}}} = 1{,}44.
+\end{align*}
+\begin{jawaban}
+(a) $p_1/p_0=0{,}333$ \quad (b) poliatomik ($\gamma=\tfrac43$) \quad (c) $K_{\text{akhir}}/K_{\text{awal}}=3^{1/3}=1{,}44$.
+\end{jawaban}
 
 % =====================================================================
 % BAB 20 -- ENTROPI DAN HUKUM KEDUA TERMODINAMIKA
@@ -2773,7 +3141,6 @@ Adiabatik (i--l) & $0$ & $-\num{3,77e3}$ & \num{3,77e3} & \num{1,04e-21} \\
 % Memakai makro yang sudah ada di main.tex: \bab, \soal, rumusutama,
 % \diketahui, \ditanya, \konsep, \penyelesaian, jawaban.
 % Tempel setelah Bab 19 dan sebelum Kesimpulan.
-% Soal 33, 35, 57, 59, 66, 74, 76, dan 79 BELUM dikerjakan (teks soal belum ada).
 % =====================================================================
 \bab{20}{Entropi dan Hukum Kedua Termodinamika}
 
@@ -2797,31 +3164,288 @@ Adiabatik (i--l) & $0$ & $-\num{3,77e3}$ & \num{3,77e3} & \num{1,04e-21} \\
 \end{rumusutama}
 
 % ---------------------------------------------------------------------
-\soal{72}
-Sebuah pendingin Carnot mengambil \SI{35,0}{\kilo\joule} kalor dalam setiap siklus dan beroperasi dengan koefisien kinerja \num{4,60}. Berapa (a) energi per siklus yang dipindahkan sebagai kalor ke ruangan dan (b) usaha yang dilakukan per siklus?
+\soal{33}
+Gambar 20-29 memperlihatkan siklus reversibel yang dijalani \SI{1,00}{\mole} gas ideal monoatomik. Volume $V_c=8{,}00V_b$. Proses $bc$ adalah ekspansi adiabatik dengan $p_b=\SI{10,0}{\atm}$ dan $V_b=\SI{1,00e-3}{\metre\cubed}$. Untuk siklus tersebut, tentukan (a) energi yang ditambahkan ke gas sebagai kalor, (b) energi yang meninggalkan gas sebagai kalor, (c) usaha total yang dilakukan gas, dan (d) efisiensi siklus.
 
-\diketahui
+\IfFileExists{images/33.png}{%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\linewidth]{images/33.png}
+  \caption{Siklus gas ideal monoatomik (Gambar 20-29)}
+\end{figure}}{}
+
+\diketahui\ (dari Gambar 20-29: $a\to b$ volume tetap, $b\to c$ adiabatik, $c\to a$ tekanan tetap, dengan $p_a=p_c$ dan $V_a=V_b$)
 \begin{align*}
-|Q_C| &= \SI{35,0}{\kilo\joule},&
-K &= \num{4,60}.
+n &= \SI{1,00}{\mole},&
+p_b &= \SI{10,0}{\atm}=\SI{1,013e6}{\pascal},\\
+V_b &= \SI{1,00e-3}{\metre\cubed},&
+V_c &= 8{,}00V_b,\\
+\gamma &= \tfrac53.
 \end{align*}
-\ditanya\ (a) $|Q_H|$; (b) $|W|$.
+\ditanya\ (a) $Q_{\text{masuk}}$; (b) $Q_{\text{keluar}}$; (c) $W$; (d) $\varepsilon$.
 
-\konsep\ Koefisien kinerja pendingin $K=\dfrac{|Q_C|}{|W|}$, dan kekekalan energi pada satu siklus: $|Q_H|=|Q_C|+|W|$.
+\konsep\ Kalor hanya masuk pada $a\to b$ ($Q=nC_V\Delta T$) dan hanya keluar pada $c\to a$ ($Q=nC_p\Delta T$); $b\to c$ adiabatik ($Q=0$). Usaha total $W=Q_{\text{masuk}}-|Q_{\text{keluar}}|$ dan $\varepsilon=W/Q_{\text{masuk}}$.
 
 \penyelesaian
 
-\noindent\textbf{(b) Usaha per siklus}
+\noindent\textbf{Keadaan gas}
 \begin{align*}
-|W| &= \frac{|Q_C|}{K} = \frac{\SI{35,0}{\kilo\joule}}{4{,}60} = \SI{7,61}{\kilo\joule}.
+p_c &= p_b\left(\frac{V_b}{V_c}\right)^{\gamma} = (\SI{10,0}{\atm})\,8^{-5/3} = \frac{\SI{10,0}{\atm}}{32}=\SI{0,3125}{\atm}=p_a,\\
+T_b &= \frac{p_bV_b}{nR}=\frac{(\SI{1,013e6}{\pascal})(\SI{1,00e-3}{\metre\cubed})}{(1{,}00)(8{,}314)}=\SI{121,8}{\kelvin},\\
+T_a &= T_b\frac{p_a}{p_b}=\frac{T_b}{32}=\SI{3,81}{\kelvin},\qquad
+T_c = T_b\frac{p_cV_c}{p_bV_b}=\frac{T_b}{4}=\SI{30,5}{\kelvin}.
 \end{align*}
 
-\noindent\textbf{(a) Kalor yang dilepas ke ruangan}
+\noindent\textbf{(a) Kalor masuk ($a\to b$)}
 \begin{align*}
-|Q_H| &= |Q_C|+|W| = \SI{35,0}{\kilo\joule}+\SI{7,61}{\kilo\joule} = \SI{42,6}{\kilo\joule}.
+Q_{ab} &= nC_V(T_b-T_a) = (1{,}00)(\tfrac32)(8{,}314)(121{,}8-3{,}81)\,\si{\joule} = \SI{1,47e3}{\joule}.
+\end{align*}
+
+\noindent\textbf{(b) Kalor keluar ($c\to a$)}
+\begin{align*}
+Q_{ca} &= nC_p(T_a-T_c) = (1{,}00)(\tfrac52)(8{,}314)(3{,}81-30{,}5)\,\si{\joule} = -\SI{554}{\joule},
+\end{align*}
+sehingga energi yang meninggalkan gas sebagai kalor adalah \SI{554}{\joule}.
+
+\noindent\textbf{(c) Usaha total}
+\begin{align*}
+W &= Q_{ab}+Q_{ca} = \SI{1,47e3}{\joule}-\SI{554}{\joule} = \SI{918}{\joule}.
+\end{align*}
+
+\noindent\textbf{(d) Efisiensi}
+\begin{align*}
+\varepsilon &= \frac{W}{Q_{ab}} = \frac{\SI{918}{\joule}}{\SI{1,47e3}{\joule}} = 0{,}624.
 \end{align*}
 \begin{jawaban}
-(a) $|Q_H| \approx \SI{42,6}{\kilo\joule}$ \quad (b) $|W| \approx \SI{7,61}{\kilo\joule}$.
+(a) $\SI{1,47}{\kilo\joule}$ \quad (b) $\SI{0,554}{\kilo\joule}$ \quad (c) $\SI{0,918}{\kilo\joule}$ \quad (d) $\varepsilon\approx62{,}4\%$.
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{35}
+Siklus pada Gambar 20-31 menggambarkan kerja mesin pembakaran dalam berbahan bensin. Volume $V_3=4{,}00V_1$. Anggap campuran bensin--udara yang masuk adalah gas ideal dengan $\gamma=\num{1,30}$. Berapa perbandingan (a) $T_2/T_1$, (b) $T_3/T_1$, (c) $T_4/T_1$, (d) $p_3/p_1$, dan (e) $p_4/p_1$? (f) Berapa efisiensi mesin?
+
+\IfFileExists{images/35.png}{%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\linewidth]{images/35.png}
+  \caption{Siklus mesin bensin (Gambar 20-31)}
+\end{figure}}{}
+
+\diketahui\ (dari Gambar 20-31: $1\to2$ volume tetap ("spark") hingga $p_2=3{,}00p_1$; $2\to3$ adiabatik; $3\to4$ volume tetap; $4\to1$ adiabatik)
+\begin{align*}
+V_3 &= V_4 = 4{,}00V_1,&
+V_2 &= V_1,&
+p_2 &= 3{,}00p_1,&
+\gamma &= \num{1,30}.
+\end{align*}
+\ditanya\ $T_2/T_1$, $T_3/T_1$, $T_4/T_1$, $p_3/p_1$, $p_4/p_1$, dan efisiensi $\varepsilon$.
+
+\konsep\ Hukum gas ideal $pV/T=\text{konstan}$; proses adiabatik: $TV^{\gamma-1}=\text{konstan}$ dan $pV^{\gamma}=\text{konstan}$. Efisiensi $\varepsilon=1-|Q_{\text{keluar}}|/Q_{\text{masuk}}$, dengan kalor hanya dipertukarkan pada proses volume tetap ($Q=nC_V\Delta T$).
+
+\penyelesaian
+
+\noindent\textbf{(a)} $1\to2$ pada volume tetap:
+\begin{align*}
+\frac{T_2}{T_1} &= \frac{p_2}{p_1} = 3{,}00.
+\end{align*}
+
+\noindent\textbf{(b), (d)} $2\to3$ adiabatik:
+\begin{align*}
+\frac{T_3}{T_2} &= \left(\frac{V_2}{V_3}\right)^{\gamma-1}=4^{-0{,}30}=0{,}660
+\;\Rightarrow\; \frac{T_3}{T_1}=3{,}00(0{,}660)=1{,}98,\\
+\frac{p_3}{p_2} &= \left(\frac{V_2}{V_3}\right)^{\gamma}=4^{-1{,}30}=0{,}165
+\;\Rightarrow\; \frac{p_3}{p_1}=3{,}00(0{,}165)=0{,}495.
+\end{align*}
+
+\noindent\textbf{(c), (e)} $4\to1$ adiabatik ($V_4=V_3=4V_1$ ke $V_1$):
+\begin{align*}
+\frac{T_4}{T_1} &= \left(\frac{V_1}{V_4}\right)^{\gamma-1}=4^{-0{,}30}=0{,}660,\\
+\frac{p_4}{p_1} &= \left(\frac{V_1}{V_4}\right)^{\gamma}=4^{-1{,}30}=0{,}165.
+\end{align*}
+
+\noindent\textbf{(f) Efisiensi}
+\begin{align*}
+Q_{\text{masuk}} &= nC_V(T_2-T_1) = nC_VT_1(3{,}00-1) = 2{,}00\,nC_VT_1,\\
+|Q_{\text{keluar}}| &= nC_V(T_3-T_4) = nC_VT_1(1{,}98-0{,}660) = 1{,}32\,nC_VT_1,\\
+\varepsilon &= 1-\frac{1{,}32}{2{,}00} = 0{,}340
+\quad\left(=1-4^{-0{,}30}\right).
+\end{align*}
+\begin{jawaban}
+(a) $3{,}00$ \quad (b) $1{,}98$ \quad (c) $0{,}660$ \quad (d) $0{,}495$ \quad (e) $0{,}165$ \quad (f) $\varepsilon\approx34\%$.
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{57}
+Suhu \SI{1,00}{\mole} gas ideal monoatomik dinaikkan secara reversibel dari \SI{300}{\kelvin} menjadi \SI{400}{\kelvin} dengan volume dijaga tetap. Berapa perubahan entropi gas?
+
+\diketahui
+\begin{align*}
+n &= \SI{1,00}{\mole},&
+T_i &= \SI{300}{\kelvin},&
+T_f &= \SI{400}{\kelvin},&
+V &= \text{konstan}.
+\end{align*}
+\ditanya\ $\Delta S$.
+
+\konsep\ Pada volume tetap, $dQ=nC_V\,dT$ dengan $C_V=\tfrac32R$ (monoatomik), sehingga $\Delta S=\displaystyle\int_{T_i}^{T_f}\frac{nC_V\,dT}{T}=nC_V\ln\frac{T_f}{T_i}$.
+
+\penyelesaian
+\begin{align*}
+\Delta S &= n\left(\tfrac32R\right)\ln\frac{T_f}{T_i}
+= (1{,}00)(\tfrac32)(\SI{8,31}{\joule\per\mole\per\kelvin})\ln\frac{400}{300}
+= \SI{3,59}{\joule\per\kelvin}.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{\Delta S\approx\SI{3,59}{\joule\per\kelvin}}
+\]
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{59}
+Sampel air bermassa \SI{0,600}{\kilo\gram} mula-mula berupa es bersuhu \SI{-20}{\celsius}. Berapa perubahan entropi sampel jika suhunya dinaikkan menjadi \SI{40}{\celsius}?
+
+\diketahui\ (Tabel 18-3 dan 18-4)
+\begin{align*}
+m &= \SI{0,600}{\kilo\gram},&
+c_{\text{es}} &= \SI{2220}{\joule\per\kilo\gram\per\kelvin},&
+c_{\text{air}} &= \SI{4190}{\joule\per\kilo\gram\per\kelvin},&
+L_F &= \SI{333}{\kilo\joule\per\kilo\gram}.
+\end{align*}
+\ditanya\ $\Delta S_{\text{total}}$ dari \SI{-20}{\celsius} (es) ke \SI{40}{\celsius} (air).
+
+\konsep\ Entropi adalah fungsi keadaan, sehingga perubahannya dihitung lewat tiga proses reversibel: (1) es dipanaskan $\SI{253}{\kelvin}\to\SI{273}{\kelvin}$, $\Delta S_1=mc_{\text{es}}\ln\dfrac{T_2}{T_1}$; (2) es melebur pada $\SI{273}{\kelvin}$, $\Delta S_2=\dfrac{mL_F}{T}$; (3) air dipanaskan $\SI{273}{\kelvin}\to\SI{313}{\kelvin}$, $\Delta S_3=mc_{\text{air}}\ln\dfrac{T_3}{T_2}$.
+
+\penyelesaian
+\begin{align*}
+\Delta S_1 &= (0{,}600)(2220)\ln\frac{273}{253} = \SI{101}{\joule\per\kelvin},\\
+\Delta S_2 &= \frac{(0{,}600)(\SI{3,33e5}{\joule\per\kilo\gram})}{\SI{273}{\kelvin}} = \SI{731}{\joule\per\kelvin},\\
+\Delta S_3 &= (0{,}600)(4190)\ln\frac{313}{273} = \SI{344}{\joule\per\kelvin},\\
+\Delta S_{\text{total}} &= 101+731+344 = \SI{1,18e3}{\joule\per\kelvin}.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{\Delta S\approx\SI{1,18e3}{\joule\per\kelvin}}
+\]
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{66}
+Sebuah pendingin ideal melakukan usaha \SI{150}{\joule} untuk mengambil \SI{560}{\joule} kalor dari kompartemen dinginnya. (a) Berapa koefisien kinerja pendingin? (b) Berapa kalor per siklus yang dibuang ke dapur?
+
+\diketahui
+\begin{align*}
+|W| &= \SI{150}{\joule},&
+|Q_C| &= \SI{560}{\joule}.
+\end{align*}
+\ditanya\ (a) $K$; (b) $|Q_H|$.
+
+\konsep\ $K=\dfrac{|Q_C|}{|W|}$ dan kekekalan energi pada satu siklus: $|Q_H|=|Q_C|+|W|$.
+
+\penyelesaian
+
+\noindent\textbf{(a) Koefisien kinerja}
+\begin{align*}
+K &= \frac{|Q_C|}{|W|} = \frac{\SI{560}{\joule}}{\SI{150}{\joule}} = 3{,}73.
+\end{align*}
+
+\noindent\textbf{(b) Kalor yang dibuang ke dapur}
+\begin{align*}
+|Q_H| &= |Q_C|+|W| = \SI{560}{\joule}+\SI{150}{\joule} = \SI{710}{\joule}.
+\end{align*}
+\begin{jawaban}
+(a) $K\approx3{,}73$ \quad (b) $|Q_H|=\SI{710}{\joule}$.
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{72}
+Hitung efisiensi pembangkit listrik berbahan bakar fosil yang membakar $380$ ton metrik batu bara tiap jam untuk menghasilkan kerja berguna dengan laju \SI{750}{\mega\watt}. Kalor pembakaran batu bara (kalor akibat pembakarannya) adalah \SI{28}{\mega\joule\per\kilo\gram}.
+
+\diketahui\ ($1$ ton metrik $=\SI{1000}{\kilo\gram}$)
+\begin{align*}
+\frac{m}{t} &= \frac{380\times10^3\,\si{\kilo\gram}}{3600\,\si{\second}},&
+L_c &= \SI{28}{\mega\joule\per\kilo\gram},&
+P_{\text{keluar}} &= \SI{750}{\mega\watt}.
+\end{align*}
+\ditanya\ Efisiensi $\varepsilon$.
+
+\konsep\ Efisiensi $\varepsilon=\dfrac{P_{\text{keluar}}}{P_{\text{masuk}}}$, dengan laju energi masuk dari pembakaran $P_{\text{masuk}}=\dfrac{m}{t}L_c$.
+
+\penyelesaian
+\begin{align*}
+\frac{m}{t} &= \frac{\SI{3,80e5}{\kilo\gram}}{3600\,\si{\second}} = \SI{105,6}{\kilo\gram\per\second},\\
+P_{\text{masuk}} &= \frac{m}{t}L_c = (\SI{105,6}{\kilo\gram\per\second})(\SI{28e6}{\joule\per\kilo\gram}) = \SI{2,96e9}{\watt},\\
+\varepsilon &= \frac{P_{\text{keluar}}}{P_{\text{masuk}}} = \frac{\SI{750e6}{\watt}}{\SI{2,96e9}{\watt}} = 0{,}254.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{\varepsilon\approx25{,}4\%}
+\]
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{74}
+Mesin Carnot yang reservoir bersuhu tingginya \SI{400}{\kelvin} memiliki efisiensi \SI{30,0}{\percent}. Berapa suhu reservoir bersuhu rendah harus diubah agar efisiensinya naik menjadi \SI{40,0}{\percent}?
+
+\diketahui
+\begin{align*}
+T_H &= \SI{400}{\kelvin},&
+\varepsilon_1 &= 0{,}300,&
+\varepsilon_2 &= 0{,}400.
+\end{align*}
+\ditanya\ Perubahan suhu reservoir rendah $\Delta T_C$.
+
+\konsep\ Efisiensi mesin Carnot $\varepsilon=1-\dfrac{T_C}{T_H}$, sehingga $T_C=T_H(1-\varepsilon)$.
+
+\penyelesaian
+\begin{align*}
+T_{C1} &= T_H(1-\varepsilon_1) = (\SI{400}{\kelvin})(0{,}700) = \SI{280}{\kelvin},\\
+T_{C2} &= T_H(1-\varepsilon_2) = (\SI{400}{\kelvin})(0{,}600) = \SI{240}{\kelvin},\\
+\Delta T_C &= T_{C2}-T_{C1} = -\SI{40}{\kelvin}.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{\Delta T_C = -\SI{40,0}{\kelvin}}
+\]
+(suhu reservoir rendah harus \textit{diturunkan} sebesar \SI{40,0}{\kelvin}).
+\end{jawaban}
+
+% ---------------------------------------------------------------------
+\soal{76}
+Gambar 20-36 memperlihatkan siklus Carnot pada diagram $T$--$S$ dengan skala ditetapkan oleh $S_s=\SI{0,60}{\joule\per\kelvin}$. Untuk satu siklus penuh, tentukan (a) perpindahan kalor total dan (b) usaha total yang dilakukan sistem.
+
+\IfFileExists{images/76.png}{%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.45\linewidth]{images/76.png}
+  \caption{Siklus Carnot pada diagram $T$--$S$ (Gambar 20-36)}
+\end{figure}}{}
+
+\diketahui\ (dibaca dari Gambar 20-36: siklus berbentuk persegi panjang dengan $T_H=\SI{400}{\kelvin}$ di atas dan $T_C=\SI{250}{\kelvin}$ di bawah; entropi berubah dari $\SI{0,10}{\joule\per\kelvin}$ sampai $S_s=\SI{0,60}{\joule\per\kelvin}$, karena tiap tanda skala sebesar $S_s/6$)
+\begin{align*}
+T_H &= \SI{400}{\kelvin},&
+T_C &= \SI{250}{\kelvin},&
+\Delta S &= \SI{0,60}{\joule\per\kelvin}-\SI{0,10}{\joule\per\kelvin}=\SI{0,50}{\joule\per\kelvin}.
+\end{align*}
+\ditanya\ (a) $Q_{\text{total}}$; (b) $W_{\text{total}}$.
+
+\konsep\ Pada diagram $T$--$S$, kalor pada proses isotermal adalah $Q=T\,\Delta S$, dan proses adiabatik reversibel ($\Delta S=0$) tidak melibatkan kalor. Untuk satu siklus penuh $\Delta E_{\text{int}}=0$, jadi $W=Q_{\text{total}}$ (sama dengan luas persegi panjang).
+
+\penyelesaian
+
+\noindent\textbf{(a) Kalor total}
+\begin{align*}
+Q_H &= T_H\,\Delta S = (\SI{400}{\kelvin})(\SI{0,50}{\joule\per\kelvin}) = \SI{200}{\joule}\ \text{(masuk)},\\
+Q_C &= -T_C\,\Delta S = -(\SI{250}{\kelvin})(\SI{0,50}{\joule\per\kelvin}) = -\SI{125}{\joule}\ \text{(keluar)},\\
+Q_{\text{total}} &= Q_H+Q_C = (T_H-T_C)\,\Delta S = (\SI{150}{\kelvin})(\SI{0,50}{\joule\per\kelvin}) = \SI{75}{\joule}.
+\end{align*}
+
+\noindent\textbf{(b) Usaha total}
+\begin{align*}
+W_{\text{total}} &= Q_{\text{total}} = \SI{75}{\joule}.
+\end{align*}
+\begin{jawaban}
+(a) $Q_{\text{total}}=\SI{75}{\joule}$ \quad (b) $W_{\text{total}}=\SI{75}{\joule}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2855,30 +3479,27 @@ T_C &= \SI{60,0}{\celsius}=\SI{333}{\kelvin}.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
-% >>> Soal Bab 20 yang masih perlu dikerjakan (teks soal belum tersedia):
-% \soal{33}
-% \soal{35}   (siklus mesin bensin, Gambar 20-31; perlu gambar)
-% \soal{57}
-% \soal{59}
-% \soal{66}
-% \soal{74}
-% \soal{76}   (siklus Carnot pada diagram T--S, Gambar 20-36; perlu gambar)
-% \soal{79}
-% Letakkan sesuai urutan nomor: 33 dan 35 sebelum 72; 57, 59, 66 sebelum 72; 74, 76 antara 72 dan 78; 79 setelah 78.
+\soal{79}
+Pada sebuah pendingin nyata, kumparan bersuhu rendah berada pada \SI{-13}{\celsius} dan gas terkompresi di kondensor berada pada \SI{26}{\celsius}. Berapa koefisien kinerja teoretisnya?
 
-% >>> Soal Bab 20 yang diminta: 33, 35, 57, 59, 66, 72, 74, 76, 78, 79
-% Tempel tiap soal di bawah ini dengan pola:
-%   \soal{nomor}  (teks soal)  \diketahui ... \ditanya ... \konsep ... \penyelesaian ... \begin{jawaban}...\end{jawaban}
-% \soal{33}
-% \soal{35}
-% \soal{57}
-% \soal{59}
-% \soal{66}
-% \soal{72}
-% \soal{74}
-% \soal{76}
-% \soal{78}
-% \soal{79}
+\diketahui
+\begin{align*}
+T_C &= \SI{-13}{\celsius}=\SI{260}{\kelvin},&
+T_H &= \SI{26}{\celsius}=\SI{299}{\kelvin}.
+\end{align*}
+\ditanya\ Koefisien kinerja teoretis $K_C$.
+
+\konsep\ Koefisien kinerja maksimum (teoretis) adalah koefisien kinerja pendingin Carnot, $K_C=\dfrac{T_C}{T_H-T_C}$, dengan suhu dalam kelvin.
+
+\penyelesaian
+\begin{align*}
+K_C &= \frac{T_C}{T_H-T_C} = \frac{\SI{260}{\kelvin}}{\SI{299}{\kelvin}-\SI{260}{\kelvin}} = 6{,}67.
+\end{align*}
+\begin{jawaban}
+\[
+\boxed{K_C\approx 6{,}67}
+\]
+\end{jawaban}
 
 % ======================================================================
 %% KESIMPULAN
