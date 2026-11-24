@@ -19,6 +19,7 @@
 \usepackage[most]{tcolorbox}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
 
 % ---------- FORMATTING ----------
 \onehalfspacing
@@ -55,7 +56,6 @@
 
 % ---------- DOCUMENT DETAILS ----------
 \newcommand{\judul}{HALLIDAY'S FUNDAMENTALS OF PHYSICS: CHAPTER 14-20}
-\newcommand{\matkul}{Fisika Dasar}
 \newcommand{\dosen}{Heri Trilaksana}
 \newcommand{\penulis}{Muhammad Favian Zaahir}
 \newcommand{\nim}{626108112100}
@@ -90,7 +90,8 @@
   \setcounter{equation}{0}%
   \phantomsection
   \addcontentsline{toc}{section}{Bab #1: #2}%
-  \section*{Bab #1: #2}}
+  \section*{Bab #1: #2}%
+  \markboth{Bab #1: #2}{Bab #1: #2}}
 
 \newcommand{\soal}[1]{%
   \setcounter{equation}{0}%
@@ -112,6 +113,21 @@
 \setcounter{tocdepth}{2}
 \setlength{\emergencystretch}{2em}
 
+% ---------- HEADER / FOOTER ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\leftmark}      % chapter name on the left
+\fancyfoot[R]{\thepage}       % page number on the right
+\renewcommand{\headrulewidth}{0pt}   % no header line
+\renewcommand{\footrulewidth}{0.4pt} % line separator above footer
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\leftmark}%
+  \fancyfoot[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
 
 \begin{document}
 
@@ -125,9 +141,6 @@
  
   \vspace*{1cm}
   {\large\bfseries \MakeUppercase{\judul}\par}
- 
-  \vspace{1.5cm}
-  {mata kuliah \textit{\matkul}\par}
 
 \begin{figure}[H]
   \centering
@@ -1444,9 +1457,9 @@ L &= \frac{gT^2}{4\pi^2}
 
 \diketahui
 \begin{align*}
-d &= \num{853}\ \text{kursi},&
-t &= \SI{39}{\second},&
-\Delta t &= \SI{1,8}{\second}.
+	d        & = \num{853}\ \text{kursi}, &
+	t        & = \SI{39}{\second},        &
+	\Delta t & = \SI{1,8}{\second}.
 \end{align*}
 \ditanya\ (a) $v$; (b) $w$.
 
@@ -1456,15 +1469,15 @@ t &= \SI{39}{\second},&
 
 \noindent\textbf{(a) Laju gelombang}
 \begin{align*}
-v &= \frac{d}{t} = \frac{\num{853}\ \text{kursi}}{\SI{39}{\second}} = \SI{21,9}{\text{kursi}\per\second}\approx \SI{22}{\text{kursi}\per\second}.
+	v & = \frac{d}{t} = \frac{\num{853}\ \text{kursi}}{\SI{39}{\second}} = \SI{21,9}{\text{kursi}\per\second}\approx \SI{22}{\text{kursi}\per\second}.
 \end{align*}
 
 \noindent\textbf{(b) Lebar gelombang}
 \begin{align*}
-w &= v\,\Delta t = (\SI{21,87}{\text{kursi}\per\second})(\SI{1,8}{\second}) = \num{39,4}\ \text{kursi}\approx 39\ \text{kursi}.
+	w & = v\,\Delta t = (\SI{21,87}{\text{kursi}\per\second})(\SI{1,8}{\second}) = \num{39,4}\ \text{kursi}\approx 39\ \text{kursi}.
 \end{align*}
 \begin{jawaban}
-(a) $v \approx \SI{22}{\text{kursi}\per\second}$ \quad (b) $w \approx 39$ kursi.
+	(a) $v \approx \SI{22}{\text{kursi}\per\second}$ \quad (b) $w \approx 39$ kursi.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -1473,8 +1486,8 @@ Sebuah gelombang memiliki frekuensi sudut \SI{110}{\radian\per\second} dan panja
 
 \diketahui
 \begin{align*}
-\omega &= \SI{110}{\radian\per\second},&
-\lambda &= \SI{1,80}{\metre}.
+	\omega  & = \SI{110}{\radian\per\second}, &
+	\lambda & = \SI{1,80}{\metre}.
 \end{align*}
 \ditanya\ (a) $k$; (b) $v$.
 
@@ -1484,15 +1497,15 @@ Sebuah gelombang memiliki frekuensi sudut \SI{110}{\radian\per\second} dan panja
 
 \noindent\textbf{(a) Bilangan gelombang sudut}
 \begin{align*}
-k &= \frac{2\pi}{\lambda} = \frac{2\pi}{\SI{1,80}{\metre}} = \SI{3,49}{\radian\per\metre}.
+	k & = \frac{2\pi}{\lambda} = \frac{2\pi}{\SI{1,80}{\metre}} = \SI{3,49}{\radian\per\metre}.
 \end{align*}
 
 \noindent\textbf{(b) Laju gelombang}
 \begin{align*}
-v &= \frac{\omega}{k} = \frac{\SI{110}{\radian\per\second}}{\SI{3,49}{\radian\per\metre}} = \SI{31,5}{\metre\per\second}.
+	v & = \frac{\omega}{k} = \frac{\SI{110}{\radian\per\second}}{\SI{3,49}{\radian\per\metre}} = \SI{31,5}{\metre\per\second}.
 \end{align*}
 \begin{jawaban}
-(a) $k \approx \SI{3,49}{\radian\per\metre}$ \quad (b) $v \approx \SI{31,5}{\metre\per\second}$.
+	(a) $k \approx \SI{3,49}{\radian\per\metre}$ \quad (b) $v \approx \SI{31,5}{\metre\per\second}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -1500,16 +1513,16 @@ v &= \frac{\omega}{k} = \frac{\SI{110}{\radian\per\second}}{\SI{3,49}{\radian\pe
 Sebuah gelombang sinusoidal merambat sepanjang tali yang tegang. Gambar 16-31 menunjukkan kemiringan (gradien) tali sepanjang sumbu $x$ pada $t=0$. Skala sumbu $x$ ditetapkan oleh $x_s=\SI{0,80}{\metre}$. Berapakah amplitudo gelombang?
 
 \IfFileExists{images/6.png}{%
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.45\linewidth]{images/6.png}
-  \caption{Kemiringan tali pada $t=0$ (Gambar 16-31)}
-\end{figure}}{}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\linewidth]{images/6.png}
+		\caption{Kemiringan tali pada $t=0$ (Gambar 16-31)}
+	\end{figure}}{}
 
 \diketahui\ (dibaca dari Gambar 16-31: $x_s$ memuat dua panjang gelombang, dan kemiringan maksimum tali bernilai \num{0,20})
 \begin{align*}
-x_s &= 2\lambda = \SI{0,80}{\metre},&
-\left(\frac{\partial y}{\partial x}\right)_{\max} &= \num{0,20}.
+	x_s                                               & = 2\lambda = \SI{0,80}{\metre}, &
+	\left(\frac{\partial y}{\partial x}\right)_{\max} & = \num{0,20}.
 \end{align*}
 \ditanya\ Amplitudo $y_m$.
 
@@ -1517,17 +1530,17 @@ x_s &= 2\lambda = \SI{0,80}{\metre},&
 
 \penyelesaian
 \begin{align*}
-\lambda &= \frac{x_s}{2} = \SI{0,40}{\metre},\qquad
-k = \frac{2\pi}{\lambda} = \frac{2\pi}{\SI{0,40}{\metre}} = \SI{15,7}{\radian\per\metre},\\
-y_m k &= 0{,}20
-\;\Rightarrow\;
-y_m = \frac{0{,}20}{\SI{15,7}{\per\metre}} = \SI{0,0127}{\metre}.
+	\lambda & = \frac{x_s}{2} = \SI{0,40}{\metre},\qquad
+	k = \frac{2\pi}{\lambda} = \frac{2\pi}{\SI{0,40}{\metre}} = \SI{15,7}{\radian\per\metre}, \\
+	y_m k   & = 0{,}20
+	\;\Rightarrow\;
+	y_m = \frac{0{,}20}{\SI{15,7}{\per\metre}} = \SI{0,0127}{\metre}.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{y_m \approx \SI{1,3}{\centi\metre}}
-\]
-Catatan: \num{0,20} adalah kemiringan maksimum yang dibaca dari grafik (tanpa satuan), bukan amplitudo.
+	\[
+		\boxed{y_m \approx \SI{1,3}{\centi\metre}}
+	\]
+	Catatan: \num{0,20} adalah kemiringan maksimum yang dibaca dari grafik (tanpa satuan), bukan amplitudo.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -1535,16 +1548,16 @@ Catatan: \num{0,20} adalah kemiringan maksimum yang dibaca dari grafik (tanpa sa
 Gambar 16-32 menunjukkan kecepatan transversal $u$ terhadap waktu $t$ untuk titik pada tali di $x=0$ saat sebuah gelombang melewatinya. Skala sumbu vertikal ditetapkan oleh $u_s=\SI{4,0}{\metre\per\second}$. Gelombang berbentuk umum $y(x,t)=y_m\sin(kx-\omega t+\phi)$. Berapakah $\phi$?
 
 \IfFileExists{images/8.png}{%
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.45\linewidth]{images/8.png}
-  \caption{Kecepatan transversal terhadap waktu di $x=0$ (Gambar 16-32)}
-\end{figure}}{}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\linewidth]{images/8.png}
+		\caption{Kecepatan transversal terhadap waktu di $x=0$ (Gambar 16-32)}
+	\end{figure}}{}
 
 \diketahui\ (dibaca dari Gambar 16-32: pada $t=0$ kecepatan transversal $u=-u_s$ dan sedang naik; nilai maksimum kurva $u_{\max}=\SI{5,0}{\metre\per\second}$)
 \begin{align*}
-u(0) &= -\SI{4,0}{\metre\per\second},&
-u_{\max} &= \omega y_m=\SI{5,0}{\metre\per\second}.
+	u(0)     & = -\SI{4,0}{\metre\per\second},           &
+	u_{\max} & = \omega y_m=\SI{5,0}{\metre\per\second}.
 \end{align*}
 \ditanya\ Konstanta fase $\phi$.
 
@@ -1554,20 +1567,20 @@ u_{\max} &= \omega y_m=\SI{5,0}{\metre\per\second}.
 
 Pada $t=0$:
 \begin{align*}
-u(0) &= -\omega y_m\cos\phi = -(\SI{5,0}{\metre\per\second})\cos\phi = -\SI{4,0}{\metre\per\second}
-\;\Rightarrow\;
-\cos\phi = 0{,}80,\\
-\phi &= \pm\cos^{-1}(0{,}80) = \pm 0{,}6435\ \si{\radian}.
+	u(0) & = -\omega y_m\cos\phi = -(\SI{5,0}{\metre\per\second})\cos\phi = -\SI{4,0}{\metre\per\second}
+	\;\Rightarrow\;
+	\cos\phi = 0{,}80,                                                                                   \\
+	\phi & = \pm\cos^{-1}(0{,}80) = \pm 0{,}6435\ \si{\radian}.
 \end{align*}
 Pada grafik, $u$ sedang naik di $t=0$, sehingga $a_y(0)>0$:
 \begin{align*}
-a_y(0) &= -\omega^2 y_m\sin\phi > 0 \;\Rightarrow\; \sin\phi<0 \;\Rightarrow\; \phi = -0{,}6435\ \si{\radian}.
+	a_y(0) & = -\omega^2 y_m\sin\phi > 0 \;\Rightarrow\; \sin\phi<0 \;\Rightarrow\; \phi = -0{,}6435\ \si{\radian}.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{\phi \approx -0{,}64\ \si{\radian}}\quad(\text{atau } 5{,}64\ \si{\radian}\ \text{karena } \phi\ \text{berulang tiap } 2\pi).
-\]
-Kalkulator hanya memberi $\cos^{-1}(0{,}80)=+0{,}6435$ \si{\radian}; tanda yang benar diperoleh dari arah perubahan $u$ pada grafik.
+	\[
+		\boxed{\phi \approx -0{,}64\ \si{\radian}}\quad(\text{atau } 5{,}64\ \si{\radian}\ \text{karena } \phi\ \text{berulang tiap } 2\pi).
+	\]
+	Kalkulator hanya memberi $\cos^{-1}(0{,}80)=+0{,}6435$ \si{\radian}; tanda yang benar diperoleh dari arah perubahan $u$ pada grafik.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -1575,17 +1588,17 @@ Kalkulator hanya memberi $\cos^{-1}(0{,}80)=+0{,}6435$ \si{\radian}; tanda yang 
 Gelombang transversal sinusoidal dengan panjang gelombang \SI{20}{\centi\metre} merambat sepanjang tali ke arah $x$ positif. Simpangan $y$ partikel tali di $x=0$ diberikan pada Gambar 16-34 sebagai fungsi waktu $t$; skala sumbu vertikal ditetapkan oleh $y_s=\SI{4,0}{\centi\metre}$. Persamaan gelombang berbentuk $y(x,t)=y_m\sin(kx\pm\omega t+\phi)$. (a) Pada $t=0$, apakah grafik $y$ terhadap $x$ berbentuk fungsi sinus positif atau negatif? Tentukan (b) $y_m$, (c) $k$, (d) $\omega$, (e) $\phi$, (f) tanda di depan $\omega$, dan (g) laju gelombang. (h) Berapa kecepatan transversal partikel di $x=0$ pada $t=\SI{5,0}{\second}$?
 
 \IfFileExists{images/11.png}{%
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.45\linewidth]{images/11.png}
-  \caption{Simpangan di $x=0$ terhadap waktu (Gambar 16-34)}
-\end{figure}}{}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\linewidth]{images/11.png}
+		\caption{Simpangan di $x=0$ terhadap waktu (Gambar 16-34)}
+	\end{figure}}{}
 
 \diketahui\ (dibaca dari Gambar 16-34: di $x=0$, $y(0,t)=+y_s\sin(2\pi t/T)$ dengan periode $T=\SI{10}{\second}$)
 \begin{align*}
-\lambda &= \SI{20}{\centi\metre},&
-y_s &= \SI{4,0}{\centi\metre},&
-T &= \SI{10}{\second}.
+	\lambda & = \SI{20}{\centi\metre},  &
+	y_s     & = \SI{4,0}{\centi\metre}, &
+	T       & = \SI{10}{\second}.
 \end{align*}
 \ditanya\ (a) bentuk $y(x,0)$; (b) $y_m$; (c) $k$; (d) $\omega$; (e) $\phi$; (f) tanda $\omega$; (g) $v$; (h) $u(0,\SI{5,0}{\second})$.
 
@@ -1595,51 +1608,51 @@ T &= \SI{10}{\second}.
 
 \noindent\textbf{(a) Bentuk grafik $y(x,0)$}
 \begin{align*}
-y(x,0) &= y_m\sin(kx+\pi) = -y_m\sin kx,
+	y(x,0) & = y_m\sin(kx+\pi) = -y_m\sin kx,
 \end{align*}
 yaitu fungsi \textbf{sinus negatif}.
 
 \noindent\textbf{(b)--(f) Parameter gelombang}
 \begin{align*}
-y_m &= \SI{4,0}{\centi\metre},\\
-k &= \frac{2\pi}{\lambda} = \frac{2\pi}{\SI{20}{\centi\metre}} = \SI{0,31}{\radian\per\centi\metre}\;(=\SI{31}{\radian\per\metre}),\\
-\omega &= \frac{2\pi}{T} = \frac{2\pi}{\SI{10}{\second}} = \SI{0,63}{\radian\per\second},\\
-\phi &= \pi\ \si{\radian},\qquad \text{tanda di depan } \omega:\ \text{negatif } (kx-\omega t).
+	y_m    & = \SI{4,0}{\centi\metre},                                                                                                        \\
+	k      & = \frac{2\pi}{\lambda} = \frac{2\pi}{\SI{20}{\centi\metre}} = \SI{0,31}{\radian\per\centi\metre}\;(=\SI{31}{\radian\per\metre}), \\
+	\omega & = \frac{2\pi}{T} = \frac{2\pi}{\SI{10}{\second}} = \SI{0,63}{\radian\per\second},                                                \\
+	\phi   & = \pi\ \si{\radian},\qquad \text{tanda di depan } \omega:\ \text{negatif } (kx-\omega t).
 \end{align*}
 
 \noindent\textbf{(g) Laju gelombang}
 \begin{align*}
-v &= \frac{\omega}{k} = \frac{\SI{0,628}{\radian\per\second}}{\SI{0,314}{\radian\per\centi\metre}} = \SI{2,0}{\centi\metre\per\second}.
+	v & = \frac{\omega}{k} = \frac{\SI{0,628}{\radian\per\second}}{\SI{0,314}{\radian\per\centi\metre}} = \SI{2,0}{\centi\metre\per\second}.
 \end{align*}
 
 \noindent\textbf{(h) Kecepatan transversal di $x=0$}
 
 Di $x=0$, $y(0,t)=(\SI{4,0}{\centi\metre})\sin\omega t$, sehingga
 \begin{align*}
-u(0,t) &= \frac{\partial y}{\partial t} = \omega y_m\cos\omega t,\\
-u(0,\SI{5,0}{\second}) &= (\SI{0,628}{\per\second})(\SI{4,0}{\centi\metre})\cos\pi
-= -\SI{2,5}{\centi\metre\per\second}.
+	u(0,t)                 & = \frac{\partial y}{\partial t} = \omega y_m\cos\omega t,  \\
+	u(0,\SI{5,0}{\second}) & = (\SI{0,628}{\per\second})(\SI{4,0}{\centi\metre})\cos\pi
+	= -\SI{2,5}{\centi\metre\per\second}.
 \end{align*}
 \begin{jawaban}
-(a) sinus negatif \quad (b) $\SI{4,0}{\centi\metre}$ \quad (c) $\SI{0,31}{\radian\per\centi\metre}$ \quad
-(d) $\SI{0,63}{\radian\per\second}$ \quad (e) $\pi$ \si{\radian} \quad (f) negatif \quad
-(g) $\SI{2,0}{\centi\metre\per\second}$ \quad (h) $-\SI{2,5}{\centi\metre\per\second}$
-(bergerak ke bawah).
+	(a) sinus negatif \quad (b) $\SI{4,0}{\centi\metre}$ \quad (c) $\SI{0,31}{\radian\per\centi\metre}$ \quad
+	(d) $\SI{0,63}{\radian\per\second}$ \quad (e) $\pi$ \si{\radian} \quad (f) negatif \quad
+	(g) $\SI{2,0}{\centi\metre\per\second}$ \quad (h) $-\SI{2,5}{\centi\metre\per\second}$
+	(bergerak ke bawah).
 \end{jawaban}
 
 % ---------------------------------------------------------------------
 \soal{17}
 Massa per satuan panjang sebuah tali adalah \SI{1,6e-4}{\kilo\gram\per\metre}. Gelombang transversal pada tali dinyatakan oleh persamaan
 \[
-y=(\SI{0,021}{\metre})\sin\!\left[(\SI{2,0}{\per\metre})x+(\SI{30}{\per\second})t\right].
+	y=(\SI{0,021}{\metre})\sin\!\left[(\SI{2,0}{\per\metre})x+(\SI{30}{\per\second})t\right].
 \]
 Tentukan (a) laju gelombang dan (b) tegangan tali.
 
 \diketahui
 \begin{align*}
-\mu &= \SI{1,6e-4}{\kilo\gram\per\metre},&
-k &= \SI{2,0}{\per\metre},&
-\omega &= \SI{30}{\per\second}.
+	\mu    & = \SI{1,6e-4}{\kilo\gram\per\metre}, &
+	k      & = \SI{2,0}{\per\metre},              &
+	\omega & = \SI{30}{\per\second}.
 \end{align*}
 \ditanya\ (a) $v$; (b) $\tau$.
 
@@ -1649,15 +1662,15 @@ k &= \SI{2,0}{\per\metre},&
 
 \noindent\textbf{(a) Laju gelombang}
 \begin{align*}
-v &= \frac{\omega}{k} = \frac{\SI{30}{\per\second}}{\SI{2,0}{\per\metre}} = \SI{15}{\metre\per\second}.
+	v & = \frac{\omega}{k} = \frac{\SI{30}{\per\second}}{\SI{2,0}{\per\metre}} = \SI{15}{\metre\per\second}.
 \end{align*}
 
 \noindent\textbf{(b) Tegangan tali}
 \begin{align*}
-\tau &= \mu v^2 = (\SI{1,6e-4}{\kilo\gram\per\metre})(\SI{15}{\metre\per\second})^2 = \SI{0,036}{\newton}.
+	\tau & = \mu v^2 = (\SI{1,6e-4}{\kilo\gram\per\metre})(\SI{15}{\metre\per\second})^2 = \SI{0,036}{\newton}.
 \end{align*}
 \begin{jawaban}
-(a) $v = \SI{15}{\metre\per\second}$ \quad (b) $\tau = \SI{0,036}{\newton}$.
+	(a) $v = \SI{15}{\metre\per\second}$ \quad (b) $\tau = \SI{0,036}{\newton}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -1665,17 +1678,17 @@ v &= \frac{\omega}{k} = \frac{\SI{30}{\per\second}}{\SI{2,0}{\per\metre}} = \SI{
 Pada Gambar 16-36a, tali 1 memiliki massa per satuan panjang $\mu_1=\SI{3,00}{\gram\per\metre}$ dan tali 2 memiliki $\mu_2=\SI{5,00}{\gram\per\metre}$. Keduanya tegang akibat balok menggantung bermassa $M=\SI{500}{\gram}$. Hitung laju gelombang pada (a) tali 1 dan (b) tali 2. (\textit{Petunjuk:} bila tali melingkari katrol setengah putaran, tali menarik katrol dengan gaya total sebesar dua kali tegangan tali.) Selanjutnya balok dibagi menjadi dua balok ($M_1+M_2=M$) dan susunan diubah seperti Gambar 16-36b. Tentukan (c) $M_1$ dan (d) $M_2$ agar laju gelombang pada kedua tali sama.
 
 \IfFileExists{images/24.png}{%
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.6\linewidth]{images/24.png}
-  \caption{Susunan tali dan balok (Gambar 16-36)}
-\end{figure}}{}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{images/24.png}
+		\caption{Susunan tali dan balok (Gambar 16-36)}
+	\end{figure}}{}
 
 \diketahui
 \begin{align*}
-\mu_1 &= \SI{3,00e-3}{\kilo\gram\per\metre},&
-\mu_2 &= \SI{5,00e-3}{\kilo\gram\per\metre},&
-M &= \SI{0,500}{\kilo\gram}.
+	\mu_1 & = \SI{3,00e-3}{\kilo\gram\per\metre}, &
+	\mu_2 & = \SI{5,00e-3}{\kilo\gram\per\metre}, &
+	M     & = \SI{0,500}{\kilo\gram}.
 \end{align*}
 \ditanya\ (a) $v_1$; (b) $v_2$; (c) $M_1$; (d) $M_2$.
 
@@ -1685,21 +1698,21 @@ M &= \SI{0,500}{\kilo\gram}.
 
 \noindent\textbf{(a), (b) Laju gelombang}
 \begin{align*}
-\tau &= \frac{Mg}{2} = \frac{(\SI{0,500}{\kilo\gram})(\SI{9,8}{\metre\per\second\squared})}{2} = \SI{2,45}{\newton},\\
-v_1 &= \sqrt{\frac{\tau}{\mu_1}} = \sqrt{\frac{\SI{2,45}{\newton}}{\SI{3,00e-3}{\kilo\gram\per\metre}}} = \SI{28,6}{\metre\per\second},\\
-v_2 &= \sqrt{\frac{\tau}{\mu_2}} = \sqrt{\frac{\SI{2,45}{\newton}}{\SI{5,00e-3}{\kilo\gram\per\metre}}} = \SI{22,1}{\metre\per\second}.
+	\tau & = \frac{Mg}{2} = \frac{(\SI{0,500}{\kilo\gram})(\SI{9,8}{\metre\per\second\squared})}{2} = \SI{2,45}{\newton},                     \\
+	v_1  & = \sqrt{\frac{\tau}{\mu_1}} = \sqrt{\frac{\SI{2,45}{\newton}}{\SI{3,00e-3}{\kilo\gram\per\metre}}} = \SI{28,6}{\metre\per\second}, \\
+	v_2  & = \sqrt{\frac{\tau}{\mu_2}} = \sqrt{\frac{\SI{2,45}{\newton}}{\SI{5,00e-3}{\kilo\gram\per\metre}}} = \SI{22,1}{\metre\per\second}.
 \end{align*}
 
 \noindent\textbf{(c), (d) Laju sama}
 \begin{align*}
-\frac{M_1 g}{\mu_1} &= \frac{M_2 g}{\mu_2}
-\;\Rightarrow\; \frac{M_1}{M_2} = \frac{\mu_1}{\mu_2}=\frac{3}{5},\qquad M_1+M_2 = M,\\
-M_1 &= \frac{\mu_1}{\mu_1+\mu_2}M = \frac{3{,}00}{8{,}00}(\SI{500}{\gram}) = \SI{187,5}{\gram}\approx\SI{0,188}{\kilo\gram},\\
-M_2 &= M - M_1 = \SI{312,5}{\gram}\approx\SI{0,313}{\kilo\gram}.
+	\frac{M_1 g}{\mu_1} & = \frac{M_2 g}{\mu_2}
+	\;\Rightarrow\; \frac{M_1}{M_2} = \frac{\mu_1}{\mu_2}=\frac{3}{5},\qquad M_1+M_2 = M,                                                         \\
+	M_1                 & = \frac{\mu_1}{\mu_1+\mu_2}M = \frac{3{,}00}{8{,}00}(\SI{500}{\gram}) = \SI{187,5}{\gram}\approx\SI{0,188}{\kilo\gram}, \\
+	M_2                 & = M - M_1 = \SI{312,5}{\gram}\approx\SI{0,313}{\kilo\gram}.
 \end{align*}
 \begin{jawaban}
-(a) $v_1 \approx \SI{28,6}{\metre\per\second}$ \quad (b) $v_2 \approx \SI{22,1}{\metre\per\second}$ \\
-(c) $M_1 \approx \SI{0,188}{\kilo\gram}$ \quad (d) $M_2 \approx \SI{0,313}{\kilo\gram}$.
+	(a) $v_1 \approx \SI{28,6}{\metre\per\second}$ \quad (b) $v_2 \approx \SI{22,1}{\metre\per\second}$ \\
+	(c) $M_1 \approx \SI{0,188}{\kilo\gram}$ \quad (d) $M_2 \approx \SI{0,313}{\kilo\gram}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -1708,11 +1721,11 @@ Sebuah tali sepanjang \SI{2,70}{\metre} dan bermassa \SI{260}{\gram} dapat dilal
 
 \diketahui
 \begin{align*}
-L &= \SI{2,70}{\metre},&
-m &= \SI{0,260}{\kilo\gram},&
-\tau &= \SI{36,0}{\newton},\\
-y_m &= \SI{7,70e-3}{\metre},&
-P_{\text{rata}} &= \SI{85,0}{\watt}.
+	L               & = \SI{2,70}{\metre},      &
+	m               & = \SI{0,260}{\kilo\gram}, &
+	\tau            & = \SI{36,0}{\newton},       \\
+	y_m             & = \SI{7,70e-3}{\metre},   &
+	P_{\text{rata}} & = \SI{85,0}{\watt}.
 \end{align*}
 \ditanya\ Frekuensi $f$.
 
@@ -1720,29 +1733,29 @@ P_{\text{rata}} &= \SI{85,0}{\watt}.
 
 \penyelesaian
 \begin{align*}
-\mu &= \frac{m}{L} = \frac{\SI{0,260}{\kilo\gram}}{\SI{2,70}{\metre}} = \SI{0,0963}{\kilo\gram\per\metre},\\
-v &= \sqrt{\frac{\tau}{\mu}} = \sqrt{\frac{\SI{36,0}{\newton}}{\SI{0,0963}{\kilo\gram\per\metre}}} = \SI{19,3}{\metre\per\second},\\
-\omega &= \sqrt{\frac{2P_{\text{rata}}}{\mu v y_m^2}}
-= \sqrt{\frac{2(\SI{85,0}{\watt})}{(\SI{0,0963}{\kilo\gram\per\metre})(\SI{19,3}{\metre\per\second})(\SI{7,70e-3}{\metre})^2}}
-= \SI{1,24e3}{\radian\per\second},\\
-f &= \frac{\omega}{2\pi} = \frac{\SI{1,24e3}{\radian\per\second}}{2\pi} = \SI{198}{\hertz}.
+	\mu    & = \frac{m}{L} = \frac{\SI{0,260}{\kilo\gram}}{\SI{2,70}{\metre}} = \SI{0,0963}{\kilo\gram\per\metre},                           \\
+	v      & = \sqrt{\frac{\tau}{\mu}} = \sqrt{\frac{\SI{36,0}{\newton}}{\SI{0,0963}{\kilo\gram\per\metre}}} = \SI{19,3}{\metre\per\second}, \\
+	\omega & = \sqrt{\frac{2P_{\text{rata}}}{\mu v y_m^2}}
+	= \sqrt{\frac{2(\SI{85,0}{\watt})}{(\SI{0,0963}{\kilo\gram\per\metre})(\SI{19,3}{\metre\per\second})(\SI{7,70e-3}{\metre})^2}}
+	= \SI{1,24e3}{\radian\per\second},                                                                                                       \\
+	f      & = \frac{\omega}{2\pi} = \frac{\SI{1,24e3}{\radian\per\second}}{2\pi} = \SI{198}{\hertz}.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{f \approx \SI{198}{\hertz}}
-\]
+	\[
+		\boxed{f \approx \SI{198}{\hertz}}
+	\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
 \soal{28}
 Gunakan persamaan gelombang untuk mencari laju gelombang yang dinyatakan oleh
 \[
-y(x,t)=(\SI{3,00}{\milli\metre})\sin\!\left[(\SI{4,00}{\per\metre})x-(\SI{7,00}{\per\second})t\right].
+	y(x,t)=(\SI{3,00}{\milli\metre})\sin\!\left[(\SI{4,00}{\per\metre})x-(\SI{7,00}{\per\second})t\right].
 \]
 
 \diketahui
 \begin{align*}
-y &= (\SI{3,00}{\milli\metre})\sin(4{,}00\,x-7{,}00\,t),\quad x\text{ dalam m},\ t\text{ dalam s}.
+	y & = (\SI{3,00}{\milli\metre})\sin(4{,}00\,x-7{,}00\,t),\quad x\text{ dalam m},\ t\text{ dalam s}.
 \end{align*}
 \ditanya\ Laju gelombang $v$.
 
@@ -1750,28 +1763,28 @@ y &= (\SI{3,00}{\milli\metre})\sin(4{,}00\,x-7{,}00\,t),\quad x\text{ dalam m},\
 
 \penyelesaian
 \begin{align*}
-\frac{\partial^2 y}{\partial x^2} &= -(4{,}00)^2\,y = -16{,}0\,y,\qquad
-\frac{\partial^2 y}{\partial t^2} = -(7{,}00)^2\,y = -49{,}0\,y,\\
--16{,}0\,y &= \frac{1}{v^2}\left(-49{,}0\,y\right)
-\;\Rightarrow\; v^2=\frac{49{,}0}{16{,}0}
-\;\Rightarrow\; v=\SI{1,75}{\metre\per\second}.
+	\frac{\partial^2 y}{\partial x^2} & = -(4{,}00)^2\,y = -16{,}0\,y,\qquad
+	\frac{\partial^2 y}{\partial t^2} = -(7{,}00)^2\,y = -49{,}0\,y,           \\
+	-16{,}0\,y                        & = \frac{1}{v^2}\left(-49{,}0\,y\right)
+	\;\Rightarrow\; v^2=\frac{49{,}0}{16{,}0}
+	\;\Rightarrow\; v=\SI{1,75}{\metre\per\second}.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{v = \SI{1,75}{\metre\per\second}}\quad(\text{ke arah } +x).
-\]
+	\[
+		\boxed{v = \SI{1,75}{\metre\per\second}}\quad(\text{ke arah } +x).
+	\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
 \soal{29}
 Gunakan persamaan gelombang untuk mencari laju gelombang yang dinyatakan oleh
 \[
-y(x,t)=(\SI{2,00}{\milli\metre})\left[(\SI{20}{\per\metre})x-(\SI{4,0}{\per\second})t\right]^{0,5}.
+	y(x,t)=(\SI{2,00}{\milli\metre})\left[(\SI{20}{\per\metre})x-(\SI{4,0}{\per\second})t\right]^{0,5}.
 \]
 
 \diketahui
 \begin{align*}
-y &= (\SI{2,00}{\milli\metre})\,\xi^{0,5},\qquad \xi = 20\,x-4{,}0\,t.
+	y & = (\SI{2,00}{\milli\metre})\,\xi^{0,5},\qquad \xi = 20\,x-4{,}0\,t.
 \end{align*}
 \ditanya\ Laju gelombang $v$.
 
@@ -1781,27 +1794,27 @@ y &= (\SI{2,00}{\milli\metre})\,\xi^{0,5},\qquad \xi = 20\,x-4{,}0\,t.
 
 Dengan $y=A\xi^{1/2}$ dan aturan rantai ($\partial\xi/\partial x=20$, $\partial\xi/\partial t=-4{,}0$):
 \begin{align*}
-\frac{\partial^2 y}{\partial x^2} &= (20)^2\,A\left(-\tfrac14\right)\xi^{-3/2} = -100\,A\,\xi^{-3/2},\\
-\frac{\partial^2 y}{\partial t^2} &= (4{,}0)^2\,A\left(-\tfrac14\right)\xi^{-3/2} = -4{,}0\,A\,\xi^{-3/2},\\
-v^2 &= \frac{\partial^2 y/\partial t^2}{\partial^2 y/\partial x^2} = \frac{4{,}0}{100} = 0{,}040
-\;\Rightarrow\; v=\SI{0,20}{\metre\per\second}.
+	\frac{\partial^2 y}{\partial x^2} & = (20)^2\,A\left(-\tfrac14\right)\xi^{-3/2} = -100\,A\,\xi^{-3/2},                          \\
+	\frac{\partial^2 y}{\partial t^2} & = (4{,}0)^2\,A\left(-\tfrac14\right)\xi^{-3/2} = -4{,}0\,A\,\xi^{-3/2},                     \\
+	v^2                               & = \frac{\partial^2 y/\partial t^2}{\partial^2 y/\partial x^2} = \frac{4{,}0}{100} = 0{,}040
+	\;\Rightarrow\; v=\SI{0,20}{\metre\per\second}.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{v = \SI{0,20}{\metre\per\second}}\quad(\text{ke arah } +x,\ \text{sama dengan } 4{,}0/20).
-\]
+	\[
+		\boxed{v = \SI{0,20}{\metre\per\second}}\quad(\text{ke arah } +x,\ \text{sama dengan } 4{,}0/20).
+	\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
 \soal{30}
 Gunakan persamaan gelombang untuk mencari laju gelombang yang dinyatakan dalam fungsi umum $h(x,t)$:
 \[
-y(x,t)=(\SI{4,00}{\milli\metre})\,h\!\left[(\SI{30}{\per\metre})x+(\SI{6,0}{\per\second})t\right].
+	y(x,t)=(\SI{4,00}{\milli\metre})\,h\!\left[(\SI{30}{\per\metre})x+(\SI{6,0}{\per\second})t\right].
 \]
 
 \diketahui
 \begin{align*}
-y &= (\SI{4,00}{\milli\metre})\,h(\xi),\qquad \xi = 30\,x+6{,}0\,t.
+	y & = (\SI{4,00}{\milli\metre})\,h(\xi),\qquad \xi = 30\,x+6{,}0\,t.
 \end{align*}
 \ditanya\ Laju gelombang $v$.
 
@@ -1809,32 +1822,32 @@ y &= (\SI{4,00}{\milli\metre})\,h(\xi),\qquad \xi = 30\,x+6{,}0\,t.
 
 \penyelesaian
 \begin{align*}
-\frac{\partial^2 y}{\partial x^2} &= (30)^2\,(\SI{4,00}{\milli\metre})\,h''(\xi) = 900\,(\SI{4,00}{\milli\metre})\,h'',\\
-\frac{\partial^2 y}{\partial t^2} &= (6{,}0)^2\,(\SI{4,00}{\milli\metre})\,h''(\xi) = 36\,(\SI{4,00}{\milli\metre})\,h'',\\
-v^2 &= \frac{36}{900} = 0{,}040
-\;\Rightarrow\; v=\SI{0,20}{\metre\per\second}.
+	\frac{\partial^2 y}{\partial x^2} & = (30)^2\,(\SI{4,00}{\milli\metre})\,h''(\xi) = 900\,(\SI{4,00}{\milli\metre})\,h'',   \\
+	\frac{\partial^2 y}{\partial t^2} & = (6{,}0)^2\,(\SI{4,00}{\milli\metre})\,h''(\xi) = 36\,(\SI{4,00}{\milli\metre})\,h'', \\
+	v^2                               & = \frac{36}{900} = 0{,}040
+	\;\Rightarrow\; v=\SI{0,20}{\metre\per\second}.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{v = \SI{0,20}{\metre\per\second}}\quad(\text{ke arah } -x,\ \text{karena tanda } +\text{ pada } \xi).
-\]
+	\[
+		\boxed{v = \SI{0,20}{\metre\per\second}}\quad(\text{ke arah } -x,\ \text{karena tanda } +\text{ pada } \xi).
+	\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
 \soal{36}
 Empat gelombang dikirim sepanjang tali yang sama ke arah yang sama:
 \begin{align*}
-y_1(x,t) &= (\SI{4,00}{\milli\metre})\sin(2\pi x-400\pi t),\\
-y_2(x,t) &= (\SI{4,00}{\milli\metre})\sin(2\pi x-400\pi t+0{,}7\pi),\\
-y_3(x,t) &= (\SI{4,00}{\milli\metre})\sin(2\pi x-400\pi t+\pi),\\
-y_4(x,t) &= (\SI{4,00}{\milli\metre})\sin(2\pi x-400\pi t+1{,}7\pi).
+	y_1(x,t) & = (\SI{4,00}{\milli\metre})\sin(2\pi x-400\pi t),          \\
+	y_2(x,t) & = (\SI{4,00}{\milli\metre})\sin(2\pi x-400\pi t+0{,}7\pi), \\
+	y_3(x,t) & = (\SI{4,00}{\milli\metre})\sin(2\pi x-400\pi t+\pi),      \\
+	y_4(x,t) & = (\SI{4,00}{\milli\metre})\sin(2\pi x-400\pi t+1{,}7\pi).
 \end{align*}
 Berapakah amplitudo gelombang resultan?
 
 \diketahui
 \begin{align*}
-y_{m1}=y_{m2}=y_{m3}=y_{m4} &= \SI{4,00}{\milli\metre},&
-\phi_1,\phi_2,\phi_3,\phi_4 &= 0,\ 0{,}7\pi,\ \pi,\ 1{,}7\pi.
+	y_{m1}=y_{m2}=y_{m3}=y_{m4} & = \SI{4,00}{\milli\metre},       &
+	\phi_1,\phi_2,\phi_3,\phi_4 & = 0,\ 0{,}7\pi,\ \pi,\ 1{,}7\pi.
 \end{align*}
 \ditanya\ Amplitudo gelombang resultan $y_m'$.
 
@@ -1844,41 +1857,41 @@ y_{m1}=y_{m2}=y_{m3}=y_{m4} &= \SI{4,00}{\milli\metre},&
 
 Beda fase gelombang 1 dan 3 adalah $\pi$ dan beda fase gelombang 2 dan 4 adalah $1{,}7\pi-0{,}7\pi=\pi$. Pasangan fasor yang berlawanan arah dan sama panjang saling meniadakan:
 \begin{align*}
-y_m'\cos\beta &= y_m\left(\cos0+\cos0{,}7\pi+\cos\pi+\cos1{,}7\pi\right)\\
-&= y_m\left(1-0{,}588-1+0{,}588\right)=0,\\
-y_m'\sin\beta &= y_m\left(\sin0+\sin0{,}7\pi+\sin\pi+\sin1{,}7\pi\right)\\
-&= y_m\left(0+0{,}809+0-0{,}809\right)=0.
+	y_m'\cos\beta & = y_m\left(\cos0+\cos0{,}7\pi+\cos\pi+\cos1{,}7\pi\right) \\
+	              & = y_m\left(1-0{,}588-1+0{,}588\right)=0,                  \\
+	y_m'\sin\beta & = y_m\left(\sin0+\sin0{,}7\pi+\sin\pi+\sin1{,}7\pi\right) \\
+	              & = y_m\left(0+0{,}809+0-0{,}809\right)=0.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{y_m' = 0}
-\]
-Gelombang resultan beramplitudo nol (saling meniadakan sepenuhnya).
+	\[
+		\boxed{y_m' = 0}
+	\]
+	Gelombang resultan beramplitudo nol (saling meniadakan sepenuhnya).
 \end{jawaban}
 
 % ---------------------------------------------------------------------
 \soal{37}
 Dua gelombang berikut merambat sepanjang tali yang sama:
 \begin{align*}
-y_1(x,t) &= (\SI{4,60}{\milli\metre})\sin(2\pi x-400\pi t),\\
-y_2(x,t) &= (\SI{5,60}{\milli\metre})\sin(2\pi x-400\pi t+0{,}80\pi\ \si{\radian}).
+	y_1(x,t) & = (\SI{4,60}{\milli\metre})\sin(2\pi x-400\pi t),                         \\
+	y_2(x,t) & = (\SI{5,60}{\milli\metre})\sin(2\pi x-400\pi t+0{,}80\pi\ \si{\radian}).
 \end{align*}
 Tentukan (a) amplitudo dan (b) sudut fase (relatif terhadap gelombang 1) gelombang resultan. (c) Jika gelombang ketiga beramplitudo \SI{5,00}{\milli\metre} juga dikirim ke arah yang sama, berapa sudut fasenya agar amplitudo resultan yang baru maksimum?
 
 \diketahui
 \begin{align*}
-y_{m1} &= \SI{4,60}{\milli\metre},&
-y_{m2} &= \SI{5,60}{\milli\metre},&
-\phi &= 0{,}80\pi\ \si{\radian}=144^\circ,&
-y_{m3} &= \SI{5,00}{\milli\metre}.
+	y_{m1} & = \SI{4,60}{\milli\metre},           &
+	y_{m2} & = \SI{5,60}{\milli\metre},           &
+	\phi   & = 0{,}80\pi\ \si{\radian}=144^\circ, &
+	y_{m3} & = \SI{5,00}{\milli\metre}.
 \end{align*}
 \ditanya\ (a) $y_m'$; (b) $\beta$; (c) $\phi_3$.
 
 \konsep\ Metode fasor: jumlahkan komponen fasor.
 \begin{align*}
-y_m'\cos\beta &= y_{m1}+y_{m2}\cos\phi,\\
-y_m'\sin\beta &= y_{m2}\sin\phi,\\
-y_m' &= \sqrt{y_{m1}^2+y_{m2}^2+2y_{m1}y_{m2}\cos\phi}.
+	y_m'\cos\beta & = y_{m1}+y_{m2}\cos\phi,                          \\
+	y_m'\sin\beta & = y_{m2}\sin\phi,                                 \\
+	y_m'          & = \sqrt{y_{m1}^2+y_{m2}^2+2y_{m1}y_{m2}\cos\phi}.
 \end{align*}
 Amplitudo gabungan maksimum bila semua fasor segaris (sefase).
 
@@ -1886,27 +1899,27 @@ Amplitudo gabungan maksimum bila semua fasor segaris (sefase).
 
 \noindent\textbf{(a) Amplitudo resultan}
 \begin{align*}
-y_m' &= \sqrt{(4{,}60)^2+(5{,}60)^2+2(4{,}60)(5{,}60)\cos144^\circ}\ \si{\milli\metre}\\
-&=\sqrt{52{,}52-41{,}68}\ \si{\milli\metre} = \SI{3,29}{\milli\metre}.
+	y_m' & = \sqrt{(4{,}60)^2+(5{,}60)^2+2(4{,}60)(5{,}60)\cos144^\circ}\ \si{\milli\metre} \\
+	     & =\sqrt{52{,}52-41{,}68}\ \si{\milli\metre} = \SI{3,29}{\milli\metre}.
 \end{align*}
 
 \noindent\textbf{(b) Sudut fase}
 \begin{align*}
-y_m'\cos\beta &= 4{,}60+5{,}60\cos144^\circ = 0{,}0695\ \si{\milli\metre},\\
-y_m'\sin\beta &= 5{,}60\sin144^\circ = 3{,}29\ \si{\milli\metre},\\
-\beta &= \tan^{-1}\!\left(\frac{3{,}29}{0{,}0695}\right) = 88{,}8^\circ = \SI{1,55}{\radian}.
+	y_m'\cos\beta & = 4{,}60+5{,}60\cos144^\circ = 0{,}0695\ \si{\milli\metre},                            \\
+	y_m'\sin\beta & = 5{,}60\sin144^\circ = 3{,}29\ \si{\milli\metre},                                     \\
+	\beta         & = \tan^{-1}\!\left(\frac{3{,}29}{0{,}0695}\right) = 88{,}8^\circ = \SI{1,55}{\radian}.
 \end{align*}
 
 \noindent\textbf{(c) Sudut fase gelombang ketiga}
 
 Agar amplitudo gabungan maksimum, gelombang ketiga harus sefase dengan gelombang resultan dari dua gelombang pertama:
 \begin{align*}
-\phi_3 &= \beta = \SI{1,55}{\radian}\ (88{,}8^\circ)\quad(\text{relatif terhadap gelombang 1}),
+	\phi_3 & = \beta = \SI{1,55}{\radian}\ (88{,}8^\circ)\quad(\text{relatif terhadap gelombang 1}),
 \end{align*}
 sehingga amplitudo barunya $3{,}29+5{,}00=\SI{8,29}{\milli\metre}$.
 \begin{jawaban}
-(a) $y_m' \approx \SI{3,29}{\milli\metre}$ \quad (b) $\beta \approx \SI{1,55}{\radian}$ ($88{,}8^\circ$) \quad
-(c) $\phi_3 \approx \SI{1,55}{\radian}$.
+	(a) $y_m' \approx \SI{3,29}{\milli\metre}$ \quad (b) $\beta \approx \SI{1,55}{\radian}$ ($88{,}8^\circ$) \quad
+	(c) $\phi_3 \approx \SI{1,55}{\radian}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -1915,10 +1928,10 @@ Dua gelombang sinusoidal berperiode sama, beramplitudo \SI{5,0}{\milli\metre} da
 
 \diketahui
 \begin{align*}
-y_{m1} &= \SI{5,0}{\milli\metre},&
-y_{m2} &= \SI{7,0}{\milli\metre},&
-y_m' &= \SI{9,0}{\milli\metre},&
-\phi_1 &= 0.
+	y_{m1} & = \SI{5,0}{\milli\metre}, &
+	y_{m2} & = \SI{7,0}{\milli\metre}, &
+	y_m'   & = \SI{9,0}{\milli\metre}, &
+	\phi_1 & = 0.
 \end{align*}
 \ditanya\ Konstanta fase $\phi_2$.
 
@@ -1926,16 +1939,16 @@ y_m' &= \SI{9,0}{\milli\metre},&
 
 \penyelesaian
 \begin{align*}
-(9{,}0)^2 &= (5{,}0)^2+(7{,}0)^2+2(5{,}0)(7{,}0)\cos\phi_2,\\
-81 &= 74+70\cos\phi_2
-\;\Rightarrow\; \cos\phi_2=\frac{7}{70}=0{,}10,\\
-\phi_2 &= \pm\cos^{-1}(0{,}10)=\pm 1{,}47\ \si{\radian}\ (\pm 84{,}3^\circ).
+	(9{,}0)^2 & = (5{,}0)^2+(7{,}0)^2+2(5{,}0)(7{,}0)\cos\phi_2,                     \\
+	81        & = 74+70\cos\phi_2
+	\;\Rightarrow\; \cos\phi_2=\frac{7}{70}=0{,}10,                                  \\
+	\phi_2    & = \pm\cos^{-1}(0{,}10)=\pm 1{,}47\ \si{\radian}\ (\pm 84{,}3^\circ).
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{\phi_2 = \pm\SI{1,47}{\radian}\ (\pm 84^\circ)}
-\]
-Kedua tanda memenuhi karena $\cos\phi$ bernilai sama untuk $\pm\phi$.
+	\[
+		\boxed{\phi_2 = \pm\SI{1,47}{\radian}\ (\pm 84^\circ)}
+	\]
+	Kedua tanda memenuhi karena $\cos\phi$ bernilai sama untuk $\pm\phi$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -1944,9 +1957,9 @@ Seutas tali sepanjang \SI{125}{\centi\metre} bermassa \SI{2,00}{\gram} dan berte
 
 \diketahui
 \begin{align*}
-L &= \SI{1,25}{\metre},&
-m &= \SI{2,00e-3}{\kilo\gram},&
-\tau &= \SI{7,00}{\newton}.
+	L    & = \SI{1,25}{\metre},        &
+	m    & = \SI{2,00e-3}{\kilo\gram}, &
+	\tau & = \SI{7,00}{\newton}.
 \end{align*}
 \ditanya\ (a) $v$; (b) $f_1$.
 
@@ -1956,17 +1969,18 @@ m &= \SI{2,00e-3}{\kilo\gram},&
 
 \noindent\textbf{(a) Laju gelombang}
 \begin{align*}
-\mu &= \frac{\SI{2,00e-3}{\kilo\gram}}{\SI{1,25}{\metre}} = \SI{1,60e-3}{\kilo\gram\per\metre},\\
-v &= \sqrt{\frac{\tau}{\mu}} = \sqrt{\frac{\SI{7,00}{\newton}}{\SI{1,60e-3}{\kilo\gram\per\metre}}} = \SI{66,1}{\metre\per\second}.
+	\mu & = \frac{\SI{2,00e-3}{\kilo\gram}}{\SI{1,25}{\metre}} = \SI{1,60e-3}{\kilo\gram\per\metre},                                       \\
+	v   & = \sqrt{\frac{\tau}{\mu}} = \sqrt{\frac{\SI{7,00}{\newton}}{\SI{1,60e-3}{\kilo\gram\per\metre}}} = \SI{66,1}{\metre\per\second}.
 \end{align*}
 
 \noindent\textbf{(b) Frekuensi resonansi terendah}
 \begin{align*}
-f_1 &= \frac{v}{2L} = \frac{\SI{66,1}{\metre\per\second}}{2(\SI{1,25}{\metre})} = \SI{26,5}{\hertz}.
+	f_1 & = \frac{v}{2L} = \frac{\SI{66,1}{\metre\per\second}}{2(\SI{1,25}{\metre})} = \SI{26,5}{\hertz}.
 \end{align*}
 \begin{jawaban}
-(a) $v \approx \SI{66,1}{\metre\per\second}$ \quad (b) $f_1 \approx \SI{26,5}{\hertz}$.
+	(a) $v \approx \SI{66,1}{\metre\per\second}$ \quad (b) $f_1 \approx \SI{26,5}{\hertz}$.
 \end{jawaban}
+
 
 % =====================================================================
 % BAB 17 -- GELOMBANG II   (potongan untuk ditempel ke main.tex)
@@ -1976,26 +1990,26 @@ f_1 &= \frac{v}{2L} = \frac{\SI{66,1}{\metre\per\second}}{2(\SI{1,25}{\metre})} 
 \bab{17}{Gelombang II}
 
 \begin{rumusutama}
-\begin{itemize}[nosep,leftmargin=*]
-  \item \textbf{Laju bunyi:}
-        $v = \sqrt{\dfrac{B}{\rho}}$ \quad (bila tidak disebut, $v=\SI{343}{\metre\per\second}$ di udara)
-  \item \textbf{Interferensi:}
-        $\phi = \dfrac{\Delta L}{\lambda}\,2\pi$; \quad konstruktif bila $\Delta L = m\lambda$,
-        destruktif bila $\Delta L = (m+\tfrac12)\lambda$
-  \item \textbf{Intensitas dan taraf intensitas:}
-        $I = \dfrac{P_s}{4\pi r^2}$, \quad
-        $\beta = (\SI{10}{\decibel})\log\dfrac{I}{I_0}$, \;
-        $I_0 = \SI{e-12}{\watt\per\metre\squared}$, \quad
-        $\beta_2-\beta_1=(\SI{10}{\decibel})\log\dfrac{I_2}{I_1}$
-  \item \textbf{Pipa organa:} kedua ujung terbuka
-        $f = \dfrac{nv}{2L}$ ($n = 1,2,3,\dots$); satu ujung tertutup
-        $f = \dfrac{nv}{4L}$ ($n = 1,3,5,\dots$)
-  \item \textbf{Layangan (beat):} $f_{\text{layang}} = |f_1 - f_2|$
-  \item \textbf{Efek Doppler:}
-        $f' = f\,\dfrac{v \pm v_D}{v \mp v_S}$ (atas: saling mendekat); \quad
-        kerucut Mach $\sin\theta = \dfrac{v}{v_S}$
-\end{itemize}
-\par\smallskip\noindent\footnotesize Rumus mengacu pada \cite{halliday}.
+	\begin{itemize}[nosep,leftmargin=*]
+		\item \textbf{Laju bunyi:}
+		      $v = \sqrt{\dfrac{B}{\rho}}$ \quad (bila tidak disebut, $v=\SI{343}{\metre\per\second}$ di udara)
+		\item \textbf{Interferensi:}
+		      $\phi = \dfrac{\Delta L}{\lambda}\,2\pi$; \quad konstruktif bila $\Delta L = m\lambda$,
+		      destruktif bila $\Delta L = (m+\tfrac12)\lambda$
+		\item \textbf{Intensitas dan taraf intensitas:}
+		      $I = \dfrac{P_s}{4\pi r^2}$, \quad
+		      $\beta = (\SI{10}{\decibel})\log\dfrac{I}{I_0}$, \;
+		      $I_0 = \SI{e-12}{\watt\per\metre\squared}$, \quad
+		      $\beta_2-\beta_1=(\SI{10}{\decibel})\log\dfrac{I_2}{I_1}$
+		\item \textbf{Pipa organa:} kedua ujung terbuka
+		      $f = \dfrac{nv}{2L}$ ($n = 1,2,3,\dots$); satu ujung tertutup
+		      $f = \dfrac{nv}{4L}$ ($n = 1,3,5,\dots$)
+		\item \textbf{Layangan (beat):} $f_{\text{layang}} = |f_1 - f_2|$
+		\item \textbf{Efek Doppler:}
+		      $f' = f\,\dfrac{v \pm v_D}{v \mp v_S}$ (atas: saling mendekat); \quad
+		      kerucut Mach $\sin\theta = \dfrac{v}{v_S}$
+	\end{itemize}
+	\par\smallskip\noindent\footnotesize Rumus mengacu pada \cite{halliday}.
 \end{rumusutama}
 
 % ---------------------------------------------------------------------
@@ -2003,24 +2017,24 @@ f_1 &= \frac{v}{2L} = \frac{\SI{66,1}{\metre\per\second}}{2(\SI{1,25}{\metre})} 
 Gambar 17-38 memperlihatkan dua sumber titik $S_1$ dan $S_2$ yang memancarkan bunyi berpanjang gelombang $\lambda=\SI{2,00}{\metre}$ secara isotropik dan sefase. Jarak antar sumber $d=\SI{16,0}{\metre}$. Di sebarang titik $P$ pada sumbu $x$, gelombang dari $S_1$ dan $S_2$ berinterferensi. Bila $P$ sangat jauh ($x\to\infty$), berapa (a) beda fase gelombang yang tiba dari $S_1$ dan $S_2$ dan (b) jenis interferensinya? Kemudian $P$ digeser sepanjang sumbu $x$ mendekati $S_1$. (c) Apakah beda fase bertambah atau berkurang? Pada jarak $x$ berapa beda fasenya (d) $0{,}50\lambda$, (e) $1{,}00\lambda$, dan (f) $1{,}50\lambda$?
 
 \IfFileExists{images/25.png}{%
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.45\linewidth]{images/25.png}
-  \caption{Dua sumber bunyi $S_1$ dan $S_2$ (Gambar 17-38)}
-\end{figure}}{}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\linewidth]{images/25.png}
+		\caption{Dua sumber bunyi $S_1$ dan $S_2$ (Gambar 17-38)}
+	\end{figure}}{}
 
 \diketahui\ ($S_1$ di titik asal sumbu $x$ dan $S_2$ berada $d$ dari $S_1$, tegak lurus sumbu $x$, menurut Gambar 17-38)
 \begin{align*}
-\lambda &= \SI{2,00}{\metre},&
-d &= \SI{16,0}{\metre}.
+	\lambda & = \SI{2,00}{\metre}, &
+	d       & = \SI{16,0}{\metre}.
 \end{align*}
 \ditanya\ (a) $\Delta\phi$ untuk $x\to\infty$; (b) jenis interferensi; (c) arah perubahan $\Delta\phi$; (d)--(f) $x$ untuk $\Delta\phi=0{,}50\lambda,\ 1{,}00\lambda,\ 1{,}50\lambda$.
 
 \konsep\ Beda fase (dalam satuan panjang gelombang) sama dengan selisih lintasan dibagi $\lambda$: $\Delta\phi=\Delta L/\lambda$ dengan
 \[
-\Delta L = \sqrt{x^2+d^2}-x
-\;\Rightarrow\;
-x=\frac{d^2-\Delta L^2}{2\,\Delta L}.
+	\Delta L = \sqrt{x^2+d^2}-x
+	\;\Rightarrow\;
+	x=\frac{d^2-\Delta L^2}{2\,\Delta L}.
 \]
 
 \penyelesaian
@@ -2029,7 +2043,7 @@ x=\frac{d^2-\Delta L^2}{2\,\Delta L}.
 
 Untuk $x\to\infty$, $\sqrt{x^2+d^2}\to x$ sehingga $\Delta L\to0$:
 \begin{align*}
-\Delta\phi &= 0,
+	\Delta\phi & = 0,
 \end{align*}
 dan interferensi yang terjadi adalah \textbf{konstruktif penuh}.
 
@@ -2039,13 +2053,13 @@ Makin kecil $x$, selisih $\sqrt{x^2+d^2}-x$ makin besar, sehingga beda fase \tex
 
 \noindent\textbf{(d)--(f) Jarak $x$}
 \begin{align*}
-\Delta\phi=0{,}50\lambda:&\quad \Delta L=\SI{1,00}{\metre},\quad x=\frac{(16{,}0)^2-(1{,}00)^2}{2(1{,}00)}\,\si{\metre}=\SI{127,5}{\metre},\\
-\Delta\phi=1{,}00\lambda:&\quad \Delta L=\SI{2,00}{\metre},\quad x=\frac{(16{,}0)^2-(2{,}00)^2}{2(2{,}00)}\,\si{\metre}=\SI{63,0}{\metre},\\
-\Delta\phi=1{,}50\lambda:&\quad \Delta L=\SI{3,00}{\metre},\quad x=\frac{(16{,}0)^2-(3{,}00)^2}{2(3{,}00)}\,\si{\metre}=\SI{41,2}{\metre}.
+	\Delta\phi=0{,}50\lambda: & \quad \Delta L=\SI{1,00}{\metre},\quad x=\frac{(16{,}0)^2-(1{,}00)^2}{2(1{,}00)}\,\si{\metre}=\SI{127,5}{\metre}, \\
+	\Delta\phi=1{,}00\lambda: & \quad \Delta L=\SI{2,00}{\metre},\quad x=\frac{(16{,}0)^2-(2{,}00)^2}{2(2{,}00)}\,\si{\metre}=\SI{63,0}{\metre},  \\
+	\Delta\phi=1{,}50\lambda: & \quad \Delta L=\SI{3,00}{\metre},\quad x=\frac{(16{,}0)^2-(3{,}00)^2}{2(3{,}00)}\,\si{\metre}=\SI{41,2}{\metre}.
 \end{align*}
 \begin{jawaban}
-(a) $0$ \quad (b) konstruktif penuh \quad (c) bertambah \\
-(d) $\SI{127,5}{\metre}$ \quad (e) $\SI{63,0}{\metre}$ \quad (f) $\SI{41,2}{\metre}$.
+	(a) $0$ \quad (b) konstruktif penuh \quad (c) bertambah \\
+	(d) $\SI{127,5}{\metre}$ \quad (e) $\SI{63,0}{\metre}$ \quad (f) $\SI{41,2}{\metre}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2054,7 +2068,7 @@ Dua bunyi memiliki taraf intensitas yang berbeda \SI{1,00}{\decibel}. Berapakah 
 
 \diketahui
 \begin{align*}
-\beta_2-\beta_1 &= \SI{1,00}{\decibel}.
+	\beta_2-\beta_1 & = \SI{1,00}{\decibel}.
 \end{align*}
 \ditanya\ $\dfrac{I_2}{I_1}$.
 
@@ -2063,15 +2077,15 @@ $\beta_2-\beta_1=(\SI{10}{\decibel})\log(I_2/I_1)$.
 
 \penyelesaian
 \begin{align*}
-\beta_2-\beta_1 &= (\SI{10}{\decibel})\log\frac{I_2}{I_1}
-\;\Rightarrow\;
-\log\frac{I_2}{I_1}=\frac{\SI{1,00}{\decibel}}{\SI{10}{\decibel}}=0{,}100,\\
-\frac{I_2}{I_1} &= 10^{0{,}100} = 1{,}26.
+	\beta_2-\beta_1 & = (\SI{10}{\decibel})\log\frac{I_2}{I_1}
+	\;\Rightarrow\;
+	\log\frac{I_2}{I_1}=\frac{\SI{1,00}{\decibel}}{\SI{10}{\decibel}}=0{,}100, \\
+	\frac{I_2}{I_1} & = 10^{0{,}100} = 1{,}26.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{\frac{I_2}{I_1}\approx 1{,}26}
-\]
+	\[
+		\boxed{\frac{I_2}{I_1}\approx 1{,}26}
+	\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2080,8 +2094,8 @@ Sebuah sumber memancarkan gelombang bunyi secara isotropik. Intensitas gelombang
 
 \diketahui
 \begin{align*}
-r &= \SI{2,50}{\metre},&
-I &= \SI{1,91e-4}{\watt\per\metre\squared}.
+	r & = \SI{2,50}{\metre},                     &
+	I & = \SI{1,91e-4}{\watt\per\metre\squared}.
 \end{align*}
 \ditanya\ Daya sumber $P_s$.
 
@@ -2089,13 +2103,13 @@ I &= \SI{1,91e-4}{\watt\per\metre\squared}.
 
 \penyelesaian
 \begin{align*}
-P_s &= I\,(4\pi r^2) = (\SI{1,91e-4}{\watt\per\metre\squared})\,4\pi(\SI{2,50}{\metre})^2\\
-&= \SI{1,50e-2}{\watt}.
+	P_s & = I\,(4\pi r^2) = (\SI{1,91e-4}{\watt\per\metre\squared})\,4\pi(\SI{2,50}{\metre})^2 \\
+	    & = \SI{1,50e-2}{\watt}.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{P_s\approx\SI{1,50e-2}{\watt}=\SI{15,0}{\milli\watt}}
-\]
+	\[
+		\boxed{P_s\approx\SI{1,50e-2}{\watt}=\SI{15,0}{\milli\watt}}
+	\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2104,8 +2118,8 @@ Pipa organa $A$, dengan kedua ujung terbuka, memiliki frekuensi fundamental \SI{
 
 \diketahui\ (laju bunyi tidak disebut dalam soal, dipakai nilai baku $v=\SI{343}{\metre\per\second}$)
 \begin{align*}
-f_{A,1} &= \SI{300}{\hertz},&
-v &= \SI{343}{\metre\per\second}.
+	f_{A,1} & = \SI{300}{\hertz},            &
+	v       & = \SI{343}{\metre\per\second}.
 \end{align*}
 \ditanya\ (a) $L_A$; (b) $L_B$.
 
@@ -2115,22 +2129,22 @@ v &= \SI{343}{\metre\per\second}.
 
 \noindent\textbf{(a) Panjang pipa $A$}
 \begin{align*}
-f_{A,1} &= \frac{v}{2L_A}
-\;\Rightarrow\;
-L_A=\frac{v}{2f_{A,1}}=\frac{\SI{343}{\metre\per\second}}{2(\SI{300}{\hertz})}=\SI{0,572}{\metre}.
+	f_{A,1} & = \frac{v}{2L_A}
+	\;\Rightarrow\;
+	L_A=\frac{v}{2f_{A,1}}=\frac{\SI{343}{\metre\per\second}}{2(\SI{300}{\hertz})}=\SI{0,572}{\metre}.
 \end{align*}
 
 \noindent\textbf{(b) Panjang pipa $B$}
 
 Harmonik kedua pipa $A$ berfrekuensi $f_{A,2}=2f_{A,1}=\SI{600}{\hertz}$. Maka
 \begin{align*}
-\frac{3v}{4L_B} &= \SI{600}{\hertz}
-\;\Rightarrow\;
-L_B=\frac{3v}{4(\SI{600}{\hertz})}=\frac{3(\SI{343}{\metre\per\second})}{2400\,\si{\per\second}}
-=\SI{0,429}{\metre}.
+	\frac{3v}{4L_B} & = \SI{600}{\hertz}
+	\;\Rightarrow\;
+	L_B=\frac{3v}{4(\SI{600}{\hertz})}=\frac{3(\SI{343}{\metre\per\second})}{2400\,\si{\per\second}}
+	=\SI{0,429}{\metre}.
 \end{align*}
 \begin{jawaban}
-(a) $L_A \approx \SI{0,572}{\metre}$ \quad (b) $L_B \approx \SI{0,429}{\metre}$.
+	(a) $L_A \approx \SI{0,572}{\metre}$ \quad (b) $L_B \approx \SI{0,429}{\metre}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2139,9 +2153,9 @@ Pada gambar soal, $S$ adalah pengeras suara kecil yang digerakkan osilator audio
 
 \diketahui
 \begin{align*}
-L &= \SI{0,457}{\metre},&
-v &= \SI{344}{\metre\per\second},&
-f &\in [\SI{1000}{\hertz},\SI{2000}{\hertz}].
+	L & = \SI{0,457}{\metre},                      &
+	v & = \SI{344}{\metre\per\second},             &
+	f & \in [\SI{1000}{\hertz},\SI{2000}{\hertz}].
 \end{align*}
 \ditanya\ (a) Banyak frekuensi resonansi; (b) frekuensi terendah; (c) frekuensi terendah kedua.
 
@@ -2151,16 +2165,16 @@ f &\in [\SI{1000}{\hertz},\SI{2000}{\hertz}].
 
 Frekuensi dasar pipa:
 \begin{align*}
-f_1 &= \frac{v}{2L}=\frac{\SI{344}{\metre\per\second}}{2(\SI{0,457}{\metre})}=\SI{376}{\hertz}.
+	f_1 & = \frac{v}{2L}=\frac{\SI{344}{\metre\per\second}}{2(\SI{0,457}{\metre})}=\SI{376}{\hertz}.
 \end{align*}
 Syarat $\SI{1000}{\hertz}\le nf_1\le\SI{2000}{\hertz}$ memberi $2{,}66\le n\le 5{,}31$, sehingga $n=3,4,5$:
 \begin{align*}
-f_3 &= 3f_1 = \SI{1,13e3}{\hertz},\\
-f_4 &= 4f_1 = \SI{1,51e3}{\hertz},\\
-f_5 &= 5f_1 = \SI{1,88e3}{\hertz}.
+	f_3 & = 3f_1 = \SI{1,13e3}{\hertz}, \\
+	f_4 & = 4f_1 = \SI{1,51e3}{\hertz}, \\
+	f_5 & = 5f_1 = \SI{1,88e3}{\hertz}.
 \end{align*}
 \begin{jawaban}
-(a) 3 frekuensi \quad (b) $\SI{1,13e3}{\hertz}$ \quad (c) $\SI{1,51e3}{\hertz}$.
+	(a) 3 frekuensi \quad (b) $\SI{1,13e3}{\hertz}$ \quad (c) $\SI{1,51e3}{\hertz}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2169,8 +2183,8 @@ Senar $A$ sebuah biola agak terlalu kencang. Terdengar layangan \num{4,00} per s
 
 \diketahui
 \begin{align*}
-f_{\text{garpu}} &= \SI{440}{\hertz},&
-f_{\text{layang}} &= \SI{4,00}{\hertz}.
+	f_{\text{garpu}}  & = \SI{440}{\hertz},  &
+	f_{\text{layang}} & = \SI{4,00}{\hertz}.
 \end{align*}
 \ditanya\ Periode $T$ senar biola.
 
@@ -2178,13 +2192,13 @@ f_{\text{layang}} &= \SI{4,00}{\hertz}.
 
 \penyelesaian
 \begin{align*}
-f_{\text{senar}} &= \SI{440}{\hertz}+\SI{4,00}{\hertz}=\SI{444}{\hertz},\\
-T &= \frac{1}{f_{\text{senar}}}=\frac{1}{\SI{444}{\hertz}}=\SI{2,25e-3}{\second}.
+	f_{\text{senar}} & = \SI{440}{\hertz}+\SI{4,00}{\hertz}=\SI{444}{\hertz},                         \\
+	T                & = \frac{1}{f_{\text{senar}}}=\frac{1}{\SI{444}{\hertz}}=\SI{2,25e-3}{\second}.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{T\approx\SI{2,25e-3}{\second}=\SI{2,25}{\milli\second}}
-\]
+	\[
+		\boxed{T\approx\SI{2,25e-3}{\second}=\SI{2,25}{\milli\second}}
+	\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2193,8 +2207,8 @@ Sebuah garpu tala berfrekuensi tidak diketahui menghasilkan \num{3,00} layangan 
 
 \diketahui
 \begin{align*}
-f_{\text{standar}} &= \SI{384}{\hertz},&
-f_{\text{layang}} &= \SI{3,00}{\hertz}.
+	f_{\text{standar}} & = \SI{384}{\hertz},  &
+	f_{\text{layang}}  & = \SI{3,00}{\hertz}.
 \end{align*}
 \ditanya\ Frekuensi garpu tala $f$.
 
@@ -2204,13 +2218,13 @@ f_{\text{layang}} &= \SI{3,00}{\hertz}.
 
 Setelah ditempeli lilin, $f$ turun dan frekuensi layangan ikut berkurang, berarti $f$ menjadi makin dekat ke \SI{384}{\hertz}. Hal ini hanya mungkin bila semula $f>384$ Hz:
 \begin{align*}
-f &= \SI{384}{\hertz}+\SI{3,00}{\hertz}=\SI{387}{\hertz}.
+	f & = \SI{384}{\hertz}+\SI{3,00}{\hertz}=\SI{387}{\hertz}.
 \end{align*}
 (Bila semula $f=\SI{381}{\hertz}$, penurunan $f$ akan menambah selisih dan layangan bertambah, bertentangan dengan soal.)
 \begin{jawaban}
-\[
-\boxed{f=\SI{387}{\hertz}}
-\]
+	\[
+		\boxed{f=\SI{387}{\hertz}}
+	\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2219,40 +2233,40 @@ Dua kereta bergerak saling mendekat dengan laju \SI{30,5}{\metre\per\second} rel
 
 \diketahui\ (laju bunyi dipakai $v=\SI{343}{\metre\per\second}$)
 \begin{align*}
-f &= \SI{500}{\hertz},&
-v_S=v_D &= \SI{30,5}{\metre\per\second}\ (\text{relatif terhadap tanah}),&
-v_{\text{angin}} &= \SI{30,5}{\metre\per\second}.
+	f                & = \SI{500}{\hertz},                                              &
+	v_S=v_D          & = \SI{30,5}{\metre\per\second}\ (\text{relatif terhadap tanah}), &
+	v_{\text{angin}} & = \SI{30,5}{\metre\per\second}.
 \end{align*}
 \ditanya\ (a) $f'$ udara tenang; (b) $f'$ angin menuju peluit; (c) $f'$ angin dibalik.
 
 \konsep\ Efek Doppler dengan kecepatan sumber dan pendengar diukur \textit{relatif terhadap udara} (medium):
 \[
-f'=f\,\frac{v+v_D}{v-v_S}\qquad
-(v_D,v_S\ \text{saling mendekat, relatif terhadap udara}).
+	f'=f\,\frac{v+v_D}{v-v_S}\qquad
+	(v_D,v_S\ \text{saling mendekat, relatif terhadap udara}).
 \]
 
 \penyelesaian
 
 \noindent\textbf{(a) Udara tenang}
 \begin{align*}
-f' &= f\,\frac{v+v_D}{v-v_S} = (\SI{500}{\hertz})\frac{343+30{,}5}{343-30{,}5}=\SI{598}{\hertz}.
+	f' & = f\,\frac{v+v_D}{v-v_S} = (\SI{500}{\hertz})\frac{343+30{,}5}{343-30{,}5}=\SI{598}{\hertz}.
 \end{align*}
 
 \noindent\textbf{(b) Angin menuju peluit, menjauhi pendengar}
 
 Udara bergerak ke arah sumber. Relatif terhadap udara, sumber mendekati pendengar dengan laju $30{,}5+30{,}5=\SI{61,0}{\metre\per\second}$, sedangkan pendengar diam ($30{,}5-30{,}5=0$):
 \begin{align*}
-f' &= f\,\frac{v+0}{v-61{,}0} = (\SI{500}{\hertz})\frac{343}{343-61{,}0}=\SI{608}{\hertz}.
+	f' & = f\,\frac{v+0}{v-61{,}0} = (\SI{500}{\hertz})\frac{343}{343-61{,}0}=\SI{608}{\hertz}.
 \end{align*}
 
 \noindent\textbf{(c) Arah angin dibalik}
 
 Udara bergerak ke arah pendengar. Sumber diam relatif terhadap udara ($30{,}5-30{,}5=0$), sedangkan pendengar mendekati sumber dengan laju \SI{61,0}{\metre\per\second}:
 \begin{align*}
-f' &= f\,\frac{v+61{,}0}{v-0} = (\SI{500}{\hertz})\frac{343+61{,}0}{343}=\SI{589}{\hertz}.
+	f' & = f\,\frac{v+61{,}0}{v-0} = (\SI{500}{\hertz})\frac{343+61{,}0}{343}=\SI{589}{\hertz}.
 \end{align*}
 \begin{jawaban}
-(a) $\SI{598}{\hertz}$ \quad (b) $\SI{608}{\hertz}$ \quad (c) $\SI{589}{\hertz}$.
+	(a) $\SI{598}{\hertz}$ \quad (b) $\SI{608}{\hertz}$ \quad (c) $\SI{589}{\hertz}$.
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2261,9 +2275,9 @@ Sebuah pesawat terbang dengan laju $1{,}25$ kali laju bunyi. Dentuman sonik (\te
 
 \diketahui
 \begin{align*}
-v_S &= 1{,}25\,v,&
-v &= \SI{330}{\metre\per\second},&
-t &= \SI{1,00}{\minute}=\SI{60,0}{\second}.
+	v_S & = 1{,}25\,v,                             &
+	v   & = \SI{330}{\metre\per\second},           &
+	t   & = \SI{1,00}{\minute}=\SI{60,0}{\second}.
 \end{align*}
 \ditanya\ Ketinggian $H$ pesawat.
 
@@ -2271,15 +2285,15 @@ t &= \SI{1,00}{\minute}=\SI{60,0}{\second}.
 
 \penyelesaian
 \begin{align*}
-\sin\theta &= \frac{1}{1{,}25}=0{,}800
-\;\Rightarrow\;\theta=53{,}1^\circ,\qquad \tan\theta=\frac{0{,}800}{0{,}600}=1{,}33,\\
-x &= v_St = 1{,}25(\SI{330}{\metre\per\second})(\SI{60,0}{\second}) = \SI{2,475e4}{\metre},\\
-H &= x\tan\theta = (\SI{2,475e4}{\metre})(1{,}33) = \SI{3,30e4}{\metre}.
+	\sin\theta & = \frac{1}{1{,}25}=0{,}800
+	\;\Rightarrow\;\theta=53{,}1^\circ,\qquad \tan\theta=\frac{0{,}800}{0{,}600}=1{,}33,                  \\
+	x          & = v_St = 1{,}25(\SI{330}{\metre\per\second})(\SI{60,0}{\second}) = \SI{2,475e4}{\metre}, \\
+	H          & = x\tan\theta = (\SI{2,475e4}{\metre})(1{,}33) = \SI{3,30e4}{\metre}.
 \end{align*}
 \begin{jawaban}
-\[
-\boxed{H\approx\SI{3,3e4}{\metre}=\SI{33}{\kilo\metre}}
-\]
+	\[
+		\boxed{H\approx\SI{3,3e4}{\metre}=\SI{33}{\kilo\metre}}
+	\]
 \end{jawaban}
 
 % ---------------------------------------------------------------------
@@ -2287,25 +2301,25 @@ H &= x\tan\theta = (\SI{2,475e4}{\metre})(1{,}33) = \SI{3,30e4}{\metre}.
 Pada Gambar 17-46, bunyi berpanjang gelombang \SI{0,850}{\metre} dipancarkan secara isotropik oleh sumber titik $S$. Sinar bunyi 1 menuju langsung ke detektor $D$ pada jarak $L=\SI{10,0}{\metre}$. Sinar bunyi 2 menuju $D$ melalui pantulan pada permukaan datar; pantulan terjadi pada garis bagi tegak lurus garis $SD$, pada jarak $d$ dari garis tersebut. Anggap pantulan menggeser fase gelombang sebesar $0{,}500\lambda$. Untuk nilai terkecil $d$ (selain nol) berapa bunyi langsung dan bunyi pantul tiba di $D$ (a) tepat berlawanan fase dan (b) tepat sefase?
 
 \IfFileExists{images/79.png}{%
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.45\linewidth]{images/79.png}
-  \caption{Sinar langsung dan sinar pantul (Gambar 17-46)}
-\end{figure}}{}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\linewidth]{images/79.png}
+		\caption{Sinar langsung dan sinar pantul (Gambar 17-46)}
+	\end{figure}}{}
 
 \diketahui\ ($L$ dan pergeseran fase pantulan dibaca dari Gambar 17-46 dan teks soal)
 \begin{align*}
-\lambda &= \SI{0,850}{\metre},&
-L &= \SI{10,0}{\metre},&
-\Delta\phi_{\text{pantul}} &= 0{,}500\lambda.
+	\lambda                    & = \SI{0,850}{\metre}, &
+	L                          & = \SI{10,0}{\metre},  &
+	\Delta\phi_{\text{pantul}} & = 0{,}500\lambda.
 \end{align*}
 \ditanya\ $d$ terkecil (bukan nol) untuk (a) berlawanan fase; (b) sefase.
 
 \konsep\ Panjang lintasan sinar 2 adalah $2\sqrt{(L/2)^2+d^2}$, sehingga selisih lintasan
 \[
-\Delta L = 2\sqrt{\left(\frac{L}{2}\right)^2+d^2}-L,
-\qquad
-d=\sqrt{\left(\frac{L+\Delta L}{2}\right)^2-\left(\frac{L}{2}\right)^2}.
+	\Delta L = 2\sqrt{\left(\frac{L}{2}\right)^2+d^2}-L,
+	\qquad
+	d=\sqrt{\left(\frac{L+\Delta L}{2}\right)^2-\left(\frac{L}{2}\right)^2}.
 \]
 Beda fase total (dalam panjang gelombang) adalah $\Delta L/\lambda+0{,}5$.
 Berlawanan fase: $\Delta L/\lambda+0{,}5=m+\tfrac12\Rightarrow\Delta L=m\lambda$.
@@ -2317,19 +2331,19 @@ Sefase: $\Delta L/\lambda+0{,}5=m\Rightarrow\Delta L=(m-\tfrac12)\lambda$.
 
 $d=0$ ($\Delta L=0$) memang berlawanan fase, tetapi dikecualikan. Nilai terkecil berikutnya adalah $m=1$, yaitu $\Delta L=\lambda$:
 \begin{align*}
-d &= \sqrt{\left(\frac{10{,}0+0{,}850}{2}\right)^2-\left(\frac{10{,}0}{2}\right)^2}\,\si{\metre}
-= \sqrt{29{,}43-25{,}0}\,\si{\metre}=\SI{2,10}{\metre}.
+	d & = \sqrt{\left(\frac{10{,}0+0{,}850}{2}\right)^2-\left(\frac{10{,}0}{2}\right)^2}\,\si{\metre}
+	= \sqrt{29{,}43-25{,}0}\,\si{\metre}=\SI{2,10}{\metre}.
 \end{align*}
 
 \noindent\textbf{(b) Sefase}
 
 Nilai terkecil: $m=1$, yaitu $\Delta L=\tfrac12\lambda=\SI{0,425}{\metre}$:
 \begin{align*}
-d &= \sqrt{\left(\frac{10{,}0+0{,}425}{2}\right)^2-\left(\frac{10{,}0}{2}\right)^2}\,\si{\metre}
-= \sqrt{27{,}17-25{,}0}\,\si{\metre}=\SI{1,47}{\metre}.
+	d & = \sqrt{\left(\frac{10{,}0+0{,}425}{2}\right)^2-\left(\frac{10{,}0}{2}\right)^2}\,\si{\metre}
+	= \sqrt{27{,}17-25{,}0}\,\si{\metre}=\SI{1,47}{\metre}.
 \end{align*}
 \begin{jawaban}
-(a) $d \approx \SI{2,10}{\metre}$ \quad (b) $d \approx \SI{1,47}{\metre}$.
+	(a) $d \approx \SI{2,10}{\metre}$ \quad (b) $d \approx \SI{1,47}{\metre}$.
 \end{jawaban}
 
 % =====================================================================
